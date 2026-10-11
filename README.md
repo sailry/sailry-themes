@@ -218,6 +218,22 @@ Import/check/export use the same v1 parser for this configuration. Updated theme
 packages need a Sailry binary containing this extension; reimport them after
 updating the app. Static artwork remains when theme animation is disabled.
 
+## Chart colors
+
+Conversation charts use Kit's semantic colors. Set these tokens under
+`light.theme.colors` and `dark.theme.colors` independently:
+
+| Token | Use |
+| --- | --- |
+| `chart.1`–`chart.5` | Category and series palette, including pie slices and Sankey nodes |
+| `chart.2` | Default line, bar, area and radar series |
+| `chart.bullish`, `chart.bearish` | Rising and falling candlesticks |
+| `chart.grid` | Chart grid lines |
+| `foreground`, `muted.foreground` | Normal text and subdued axis labels |
+
+Omitted chart tokens inherit Kit defaults. Choose distinct series colors with
+enough contrast against each variant's conversation background.
+
 ## Global control colors
 
 The theme's `colors` already exposes Kit's global button treatments:
