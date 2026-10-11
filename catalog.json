@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "themes": [
+    {
+      "id": "great-sage",
+      "path": "great-sage",
+      "name": "Great Sage",
+      "package_version": "0.1.0",
+      "author": "Sailry",
+      "license": "Apache-2.0",
+      "description": "A theme inspired by the Great Sage, with golden accents and ink landscapes",
+      "digest": "sha256:b0b6e8abc1ac2cf274d7b35d959d89eec9e1fd6ce58770085aa647b8bfa2d0e7"
+    },
+    {
+      "id": "holographic-rhythm",
+      "path": "holographic-rhythm",
+      "name": "Holographic Rhythm",
+      "package_version": "0.1.0",
+      "author": "Sailry",
+      "license": "Apache-2.0",
+      "description": "A blue-to-pink virtual singer above a luminous holographic sky city, with pink technology accents",
+      "digest": "sha256:a61cc195cc73937abdf217645d2267e247c57f5ce0b891f88f2b8a14bfde7513"
+    },
+    {
+      "id": "ink-dragon",
+      "path": "ink-dragon",
+      "name": "Gilded Ink Dragon",
+      "package_version": "0.1.0",
+      "author": "Sailry",
+      "license": "Apache-2.0",
+      "description": "Modern ink mountains crowned by a silver dragon, with restrained gold foil accents",
+      "digest": "sha256:189f17c098049dbf7be6a21eef47c965b1ee7d5fe3d9b10a457f868615578656"
+    }
+  ]
+}
