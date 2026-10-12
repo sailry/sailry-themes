@@ -383,7 +383,8 @@
         "selection.background": "#C1CBD840",
         "scrollbar.thumb.background": "#A9B0BB50",
         "switch.thumb.background": "#F1F3F5",
-        "switch.background": "#485360"
+        "switch.background": "#485360",
+        "switch.checked.background": "linear-gradient(135deg, #363E49, #151A21)"
       }
     },
     "composer": {
