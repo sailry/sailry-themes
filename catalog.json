@@ -9,7 +9,7 @@
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "A theme inspired by the Great Sage, with golden accents and ink landscapes",
-      "digest": "sha256:b0b6e8abc1ac2cf274d7b35d959d89eec9e1fd6ce58770085aa647b8bfa2d0e7"
+      "digest": "sha256:680951f596539fb3544f3c3ec01d1b627a3a6ac0c73d9e90062c3f6096571b38"
     },
     {
       "id": "holographic-rhythm",
@@ -19,7 +19,7 @@
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "A blue-to-pink virtual singer above a luminous holographic sky city, with pink technology accents",
-      "digest": "sha256:d20725ea909351f3944439f2383e5712b01a8ae43598f66982b29cd0c59a2e6e"
+      "digest": "sha256:597d33c72dcc8c352aaa4008c2ec8a686fe0ad22b4ce148d2b0bd6de1b1996f4"
     },
     {
       "id": "ink-dragon",
@@ -29,7 +29,7 @@
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "Modern ink mountains crowned by a silver dragon, with restrained gold foil accents",
-      "digest": "sha256:544f8edbcd777dea3f297bf1b946e3db98a4f6cfa78aa21ec24f4c7fa6527f8a"
+      "digest": "sha256:dbe43e1686822ba11769118171bacf7c5e1f0fd3504792e5158668fc41d9138e"
     }
   ]
 }

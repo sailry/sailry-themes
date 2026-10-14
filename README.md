@@ -249,11 +249,10 @@ Tabs use `tab.background`, `tab.foreground`, `tab.active.background`,
 `tab_bar.segmented.background`. The Great Sage package supplies both normal and
 selected text colors, translucent bars and gold selection fills in both modes.
 
-Switches expose `switch.background` for the unchecked track,
-`switch.checked.background` for the checked track and
-`switch.thumb.background` for the thumb. Omitting the checked-track color uses
-the primary button treatment. This allows bright switch tracks alongside dark
-primary buttons without replacing the Kit control or its interactions.
+Switches expose `switch.background` for the unchecked track and
+`switch.thumb.background` for the thumb. The checked track uses
+`primary.background`; `button.primary.background` independently controls
+primary buttons.
 
 ## Checking packages
 

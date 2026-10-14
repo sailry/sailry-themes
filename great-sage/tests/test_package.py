@@ -116,7 +116,7 @@ class Package(unittest.TestCase):
         for variant in self.variants:
             colors = variant["theme"]["colors"]
             tracks = [colors["switch.background"]] + re.findall(
-                r"#[0-9A-Fa-f]{6}", colors["button.primary.background"]
+                r"#[0-9A-Fa-f]{6}", colors["primary.background"]
             )
             for track in tracks:
                 with self.subTest(mode=variant["theme"]["mode"], track=track):

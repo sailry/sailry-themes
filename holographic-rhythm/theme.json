@@ -86,8 +86,7 @@
         "button.primary.background": "#752550",
         "button.primary.foreground": "#FFFFFF",
         "button.primary.hover.background": "#642044",
-        "button.primary.active.background": "#531B38",
-        "switch.checked.background": "#752550"
+        "button.primary.active.background": "#531B38"
       }
     },
     "composer": {
@@ -436,8 +435,7 @@
         "button.primary.background": "#B44A87",
         "button.primary.foreground": "#FFF7FD",
         "button.primary.hover.background": "#92366C",
-        "button.primary.active.background": "#792954",
-        "switch.checked.background": "#BE5B97"
+        "button.primary.active.background": "#792954"
       }
     },
     "composer": {
