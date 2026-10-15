@@ -178,6 +178,20 @@ class Package(unittest.TestCase):
                 self.assertEqual(texture["fit"], "tile")
                 self.assertLessEqual(texture["opacity"], 0.2)
 
+    def test_segmented_contrast(self):
+        # Kit draws the selected segment with `background` over the segmented track.
+        for variant in self.variants:
+            colors = variant["theme"]["colors"]
+            for key in ["background", "popover.background"]:
+                track = composite(
+                    rgba(colors["tab_bar.segmented.background"]), rgba(colors[key])[:3] + [1.0]
+                )
+                selected = composite(rgba(colors["background"]), track)
+                with self.subTest(mode=variant["theme"]["mode"], surface=key):
+                    self.assertGreaterEqual(contrast(selected, track), 1.15)
+                    self.assertGreaterEqual(contrast(rgba(colors["tab.active.foreground"]), selected), 4.5)
+                    self.assertGreaterEqual(contrast(rgba(colors["tab.foreground"]), track), 4.5)
+
 
 if __name__ == "__main__":
     unittest.main()

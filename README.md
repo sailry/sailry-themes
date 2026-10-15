@@ -246,8 +246,11 @@ states remain Kit-derived.
 
 Tabs use `tab.background`, `tab.foreground`, `tab.active.background`,
 `tab.active.foreground`, `tab_bar.background` and
-`tab_bar.segmented.background`. The Great Sage package supplies both normal and
-selected text colors, translucent bars and gold selection fills in both modes.
+`tab_bar.segmented.background`. Segmented controls draw the selected segment
+with `background` over the segmented track, so `tab.active.foreground` must
+contrast with both `tab.active.background` and `background`, and the track must
+differ visibly from `background`. Underline tabs also draw `tab.active.foreground`
+directly on the page surface.
 
 Switches expose `switch.background` for the unchecked track and
 `switch.thumb.background` for the thumb. The checked track uses

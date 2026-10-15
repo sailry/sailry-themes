@@ -25,6 +25,14 @@ def contrast(first, second):
     return (values[1] + 0.05) / (values[0] + 0.05)
 
 
+def blend(overlay, surface):
+    opacity = int(overlay[7:9] or "FF", 16) / 255
+    channels = [round(int(overlay[index:index + 2], 16) * opacity
+                      + int(surface[index:index + 2], 16) * (1 - opacity))
+                for index in [1, 3, 5]]
+    return "#" + "".join(f"{channel:02X}" for channel in channels)
+
+
 class Package(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -179,6 +187,18 @@ class Package(unittest.TestCase):
                 background = "#" + "".join(f"{channel:02X}" for channel in channels)
                 with self.subTest(mode=variant["theme"]["mode"], state=state):
                     self.assertGreaterEqual(contrast(colors[state + ".foreground"], background), 4.5)
+
+    def test_segmented_contrast(self):
+        # Kit draws the selected segment with `background` over the segmented track.
+        for variant in self.variants:
+            colors = variant["theme"]["colors"]
+            for surface in [colors["background"][:7], colors["popover.background"][:7]]:
+                track = blend(colors["tab_bar.segmented.background"], surface)
+                selected = blend(colors["background"], track)
+                with self.subTest(mode=variant["theme"]["mode"], surface=surface):
+                    self.assertGreaterEqual(contrast(selected, track), 1.15)
+                    self.assertGreaterEqual(contrast(colors["tab.active.foreground"], selected), 4.5)
+                    self.assertGreaterEqual(contrast(colors["tab.foreground"], track), 4.5)
 
 
 if __name__ == "__main__":
