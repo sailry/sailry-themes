@@ -23,9 +23,29 @@ commit the reviewed `themes/` pointer separately in the application repository.
 Publish the theme commit before a parent commit that references it. Publishing
 one repository does not publish uncommitted or unpublished changes in the other.
 
-`catalog.json` is a generated v1 index for future discovery. Its `themes` entries
-contain the manifest's display metadata, the package's relative `path`, and a
-content `digest`. It currently creates no in-app marketplace or network requests.
+`catalog.json` is the generated v1 discovery index. Its `themes` entries contain
+the manifest's display metadata, relative package `path`, and canonical package
+`digest`. Each entry also lists exact `resources` with relative `path`, encoded
+`bytes` and individual SHA-256 `digest`; `theme.json` is included once. `modes`
+lists the required light and dark variants. `previews` maps those modes to their
+existing `background.window` resource, when present. A preview is artwork, not a
+rendered application screenshot.
+
+Optional `market.json` beside a theme manifest contains only
+`description_locales`, a map of supported Sailry locales to translated display
+text. The generator copies it into the catalog. This presentation metadata is
+not installed and does not change the canonical package digest. Keep strict
+`theme.json` free of catalog-only fields.
+
+Consumers resolve the official repository ref to one immutable Git commit, then
+read the index and every selected resource from that same commit. The official
+source is `https://github.com/sailry/sailry-themes`; resources can be acquired from
+`https://raw.githubusercontent.com/sailry/sailry-themes/<commit>/<path>/<resource>`.
+No release archive is required or advertised. Verify each resource's encoded size
+and digest, the complete canonical package digest, and Sailry's strict importer
+before installation. Metadata or cached previews alone do not mean package
+resources are available offline. The repository supplies data; it does not start
+application requests or install themes automatically.
 
 ```sh
 python3 scripts/catalog.py
@@ -38,14 +58,20 @@ read-only and rejects a stale index. It validates index metadata, local resource
 paths and encoded resource budgets; it does not parse Kit theme fields, decode
 images or replace Sailry's strict import validator.
 
-Before the first release, official `package_version` values remain `0.1.0`;
-manifest and catalog format versions remain numeric `1`. A package digest is
+New official packages start at `package_version: "0.1.0"`. Content changes,
+including package-local market metadata, increment the semantic version; ordinary
+updates increment the patch. Only strictly newer SemVer precedence offers an
+update. Same-version content changes, build metadata alone and older versions do
+not offer updates. Manifest and catalog format versions remain numeric `1`.
+A package digest is
 SHA-256 over `theme.json` and its distinct referenced resources, sorted by their
 relative paths. Hash input starts with `Sailry theme package v1` and a zero byte;
 each path and file uses an unsigned 64-bit big-endian byte length followed by
 its UTF-8 path or file bytes. Unreferenced artwork, guides and tests are excluded.
-A future consumer should capture the selected immutable Git commit before
-acquiring its package; it must not interpret a digest as an authorization grant.
+Consumers compare semantic version precedence before offering an update and
+verify digests when acquiring its immutable resources. An update must preserve
+the selected theme ID and appearance mode and retain the previous package on
+failure. A digest identifies content; it is not an authorization grant.
 
 ## Importing
 
@@ -68,8 +94,9 @@ assets. ZIP import also accepts one containing folder. A theme's optional
 A package contains `theme.json` and local raster resources under `assets/`.
 The manifest requires `version: 1`, an ID matching its installed directory,
 a name, author/license metadata, and both `light` and `dark` variants.
-Optional `description` introduces the theme, `package_version` identifies its
-release, and `license.name` summarizes its license without replacing `license.text`.
+Optional `description` introduces the theme. Official themes require a valid
+SemVer `package_version`; local imports may omit it. `license.name` summarizes
+the license without replacing `license.text`.
 The numeric `version` remains the manifest format version, not a release version.
 Provided descriptions must be nonblank and at most 4 KiB, with ordinary line breaks
 and tabs allowed. Release versions and license names must be nonblank, single-line

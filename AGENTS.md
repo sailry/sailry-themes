@@ -6,10 +6,13 @@
   interaction tests. Do not copy product implementations or native tests here.
 - Read `README.md` before editing. Start with `git status --short` and
   `git log --oneline -5`; preserve unrelated changes and artwork/license notices.
-- Every official theme keeps `package_version: "0.1.0"` until an explicit first
-  release decision. The manifest and catalog format versions remain numeric `1`.
-  Do not bump versions for individual features or fixes. Resource digests and
-  captured Git commits identify changed contents.
+- New official themes start at `package_version: "0.1.0"`. Increase the semantic
+  version when package content changes; ordinary updates increment the patch.
+  Only strictly newer SemVer precedence offers an update. Same-version content
+  changes, build metadata alone and older versions do not offer updates. Resource
+  digests verify integrity and immutable Git commits capture resource provenance;
+  neither is an update detector. Manifest and catalog format versions remain
+  numeric `1`.
 - Keep each theme in its ID-named directory. Resources are local raster files
   under `assets/`; do not add remote images, executable code or application UI.
 - Edit `theme.json`, then run `python3 scripts/catalog.py`. Never hand-edit

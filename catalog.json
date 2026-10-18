@@ -5,31 +5,264 @@
       "id": "great-sage",
       "path": "great-sage",
       "name": "Great Sage",
-      "package_version": "0.1.0",
+      "package_version": "0.1.1",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "A theme inspired by the Great Sage, with golden accents and ink landscapes",
-      "digest": "sha256:c2a8fb4630f49b01bf1d8cd0f41da46461c838be5efeec38fac534d97286dd42"
+      "digest": "sha256:46b601e84f4fed91289bbab9bbd0317be7f55954b0773abdfaff4d5cde7746e5",
+      "resources": [
+        {
+          "path": "assets/background.png",
+          "bytes": 470967,
+          "digest": "sha256:21ab20b9750ea42ecf2b0b7afd505caf04efbdcd2c5e86555757f20066a3f410"
+        },
+        {
+          "path": "assets/build.png",
+          "bytes": 2299,
+          "digest": "sha256:2e53e6ba31aaabb61add93f384656bdd275d3b0bb02170aea61dac76039158e6"
+        },
+        {
+          "path": "assets/cloud-bottom-right.png",
+          "bytes": 7625,
+          "digest": "sha256:77b35f1fb87122821c7730028ec0ebaddec544d44c4b302001268056953567be"
+        },
+        {
+          "path": "assets/cloud-top-left.png",
+          "bytes": 6933,
+          "digest": "sha256:551fe17012a2159c761eedabf5dd1a2a024df4870b37aec55e12c3e9da30bcb3"
+        },
+        {
+          "path": "assets/explore.png",
+          "bytes": 2878,
+          "digest": "sha256:abea9dcfecf0077bf10edb987892dd6bcb7a5ddb737db9b9727d8be272470e79"
+        },
+        {
+          "path": "assets/gilding.png",
+          "bytes": 24694,
+          "digest": "sha256:6548ca78ca3f913a849ff9c5e594a5849c857c13a405a99af73361983d2db0ea"
+        },
+        {
+          "path": "assets/grain.png",
+          "bytes": 6693,
+          "digest": "sha256:d2342401c8eccc113926e801e9bf3c611cd5a08d0ee0a0276423279a962a4b32"
+        },
+        {
+          "path": "assets/hero.png",
+          "bytes": 211741,
+          "digest": "sha256:98172ab658582dca0aa4c5f007d4a4062d7445ba947b0002fce6ec6b9ec61004"
+        },
+        {
+          "path": "assets/plan.png",
+          "bytes": 3670,
+          "digest": "sha256:286ed30b15bcf49f0f2364e1b5873b76b8b03005d850dbd0107247d699b96f96"
+        },
+        {
+          "path": "assets/review.png",
+          "bytes": 3507,
+          "digest": "sha256:af96ab808bca1d1492dda0879a93a606c59ad6ba557ab24cc3327c6a46f7be14"
+        },
+        {
+          "path": "theme.json",
+          "bytes": 27544,
+          "digest": "sha256:cbc341b91187e68b4cb32d84913e66a65bfa004341d36711a5f867343ee3197f"
+        }
+      ],
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "previews": {
+        "light": "assets/background.png",
+        "dark": "assets/background.png"
+      },
+      "description_locales": {
+        "de": "Goldene Akzente und Tuschelandschaften",
+        "es": "Acentos dorados y paisajes de tinta",
+        "fr": "Accents dorés et paysages à l’encre",
+        "ja": "金色のアクセントと水墨の風景",
+        "ko": "금빛 강조와 수묵 풍경",
+        "pt-BR": "Detalhes dourados e paisagens em tinta",
+        "ru": "Золотые акценты и пейзажи тушью",
+        "zh-CN": "金色点缀与水墨山水",
+        "zh-TW": "金色點綴與水墨山水"
+      }
     },
     {
       "id": "holographic-rhythm",
       "path": "holographic-rhythm",
       "name": "Holographic Rhythm",
-      "package_version": "0.1.0",
+      "package_version": "0.1.1",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "A blue-to-pink virtual singer above a luminous holographic sky city, with pink technology accents",
-      "digest": "sha256:7fea29ddca00a5e8bf1f97335cb3a709dcf0342fa65f047871a74a9970b03ef9"
+      "digest": "sha256:0df30663c0daa6a4b2c5c18e7175851f183caa63fc7bbbd33b01ef00ce645286",
+      "resources": [
+        {
+          "path": "assets/background-dark.png",
+          "bytes": 2422751,
+          "digest": "sha256:7b950bc4838a5e1832ff8df7ff3ead200d4149f5797526addeedcc2557165c90"
+        },
+        {
+          "path": "assets/background.png",
+          "bytes": 2191812,
+          "digest": "sha256:6f3c2dcb6ad4c4db9cd3303394c98b7d658b57dd8a82bc39b0cf1fc4044c103c"
+        },
+        {
+          "path": "assets/build.png",
+          "bytes": 3242,
+          "digest": "sha256:55bd86e85215fc8d3a3c6667bee392d672844a307205f77729d787571abae6da"
+        },
+        {
+          "path": "assets/button-trace.png",
+          "bytes": 15885,
+          "digest": "sha256:fbb54aac07d7484e2cf144159f4584400416a5cefc794cdfe6c7d5eb1f90d70b"
+        },
+        {
+          "path": "assets/circuit.png",
+          "bytes": 5624,
+          "digest": "sha256:edb8aa61c6a9babf4a9a663673f707c1faf2d46be54c370b3037622605b50d8b"
+        },
+        {
+          "path": "assets/corner-bottom-right.png",
+          "bytes": 2197,
+          "digest": "sha256:2939a7e8c1a6d860eadc0b2009738e712ca9b24dbe3f31a821657f6bf5df82f9"
+        },
+        {
+          "path": "assets/corner-top-left.png",
+          "bytes": 2176,
+          "digest": "sha256:0875d371fe0e0976c80cfb4f9fddd13d4b502ebb0be2dd95244b803b892d16fb"
+        },
+        {
+          "path": "assets/explore.png",
+          "bytes": 5987,
+          "digest": "sha256:eff10a57e83bf94c4af21dad144f1c71a7ba51cbeb29012eba6090ab6cd6c748"
+        },
+        {
+          "path": "assets/hero.png",
+          "bytes": 969182,
+          "digest": "sha256:781392df7c0bb0f21089bad22225f07b9d58e5d5bd27b6e3675112349f38ee7d"
+        },
+        {
+          "path": "assets/plan.png",
+          "bytes": 3463,
+          "digest": "sha256:1737ec79ba856d3f93faaf83ef73741bf75361bd734d543af905781b3ecd52a0"
+        },
+        {
+          "path": "assets/review.png",
+          "bytes": 4152,
+          "digest": "sha256:122fc55da98b6435e7aa5a543c5c0f449c1fd3d704011440f9731bf93d2bbabb"
+        },
+        {
+          "path": "theme.json",
+          "bytes": 30074,
+          "digest": "sha256:cb2fb80f4846d982006a8cd0589e3e13d5f137e4ea3f7b9f162a721ec9e2d580"
+        }
+      ],
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "previews": {
+        "light": "assets/background.png",
+        "dark": "assets/background-dark.png"
+      },
+      "description_locales": {
+        "de": "Eine holografische Himmelsstadt in Blau und Rosa",
+        "es": "Una ciudad holográfica entre tonos azules y rosas",
+        "fr": "Une ville céleste holographique aux tons bleus et roses",
+        "ja": "青とピンクに輝くホログラフィックな空中都市",
+        "ko": "파란색과 분홍색으로 빛나는 홀로그램 하늘 도시",
+        "pt-BR": "Uma cidade holográfica no céu em tons de azul e rosa",
+        "ru": "Голографический небесный город в сине-розовых тонах",
+        "zh-CN": "蓝粉渐变的全息天空之城",
+        "zh-TW": "藍粉漸層的全息天空之城"
+      }
     },
     {
       "id": "ink-dragon",
       "path": "ink-dragon",
       "name": "Gilded Ink Dragon",
-      "package_version": "0.1.0",
+      "package_version": "0.1.1",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "Modern ink mountains crowned by a silver dragon, with restrained gold foil accents",
-      "digest": "sha256:21b6578370f4bbbe8e97e3ba72522565f2c022e9c7e111ef764f038a6fb2da01"
+      "digest": "sha256:5a76d158c89207e7252ef0780669a8f12c5ca7079f1147468d55890fdb982269",
+      "resources": [
+        {
+          "path": "assets/background-dark.png",
+          "bytes": 435389,
+          "digest": "sha256:b94a225ab8a260944c1ad51f5d2f681b11d923ac2b7bcf5552391e1d23366b85"
+        },
+        {
+          "path": "assets/background.png",
+          "bytes": 485865,
+          "digest": "sha256:3b790cc68cbd5509e3023a8b964e56016bc9823ce9f7e6547b9898fe52ea17d8"
+        },
+        {
+          "path": "assets/build.png",
+          "bytes": 4433,
+          "digest": "sha256:e3aff2fd0df621e150c6cd7520f9c3031c73bd1c79ecc80063b96b665785c195"
+        },
+        {
+          "path": "assets/button-ink.png",
+          "bytes": 29431,
+          "digest": "sha256:62ae6f7c2313199e65e1df408f818fd08a4302f4454eeccbc92c9f15069adb05"
+        },
+        {
+          "path": "assets/corner-bottom-right.png",
+          "bytes": 7481,
+          "digest": "sha256:fe31e4e5316b8a2ecfd7f3351bcc5c7d6eb60ca2a9a9855d5c7074378bac091e"
+        },
+        {
+          "path": "assets/corner-top-left.png",
+          "bytes": 8362,
+          "digest": "sha256:6daf14a4086806519925700fab33fb68c7243f3b603219fd9ddab9012160eadf"
+        },
+        {
+          "path": "assets/explore.png",
+          "bytes": 3395,
+          "digest": "sha256:90a7c511b56e63b515d010304999d74c118c6f835aab2019ad2e3b72c5d19aae"
+        },
+        {
+          "path": "assets/grain.png",
+          "bytes": 7859,
+          "digest": "sha256:769940954976e6c7e6dbaf93cf6109f8d333c9d96d0d73fd8830517d21ea1e0f"
+        },
+        {
+          "path": "assets/plan.png",
+          "bytes": 4454,
+          "digest": "sha256:862dc1f936535ea403fed9b1baecab9fa37f4f3d54c32843307f24a666a717f3"
+        },
+        {
+          "path": "assets/review.png",
+          "bytes": 4022,
+          "digest": "sha256:ad30a38e9d5e07e24c51e41f15e06324f6d9bc8f2abf42597185b7124d988c6f"
+        },
+        {
+          "path": "theme.json",
+          "bytes": 27907,
+          "digest": "sha256:4bf0c62f87c185a792f4bd066ef24f727295522d8fa27aaa2953b4ed650a5cd7"
+        }
+      ],
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "previews": {
+        "light": "assets/background.png",
+        "dark": "assets/background-dark.png"
+      },
+      "description_locales": {
+        "de": "Tuscheberge und ein silberner Drache",
+        "es": "Montañas de tinta y un dragón plateado",
+        "fr": "Montagnes à l’encre et dragon argenté",
+        "ja": "水墨の山々と銀の龍",
+        "ko": "수묵 산맥과 은빛 용",
+        "pt-BR": "Montanhas em tinta e um dragão prateado",
+        "ru": "Горы тушью и серебряный дракон",
+        "zh-CN": "水墨群山与银龙",
+        "zh-TW": "水墨群山與銀龍"
+      }
     }
   ]
 }

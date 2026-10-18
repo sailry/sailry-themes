@@ -12,7 +12,33 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_LIMIT = 256 * 1024
 FILE_LIMIT = 8 * 1024 * 1024
 PACKAGE_LIMIT = 32 * 1024 * 1024
+LOCALES = {"en", "zh-CN", "zh-TW", "ja", "ko", "fr", "de", "es", "pt-BR", "ru"}
 
+
+
+def precedence(value):
+    if not isinstance(value, str):
+        raise ValueError("Theme package version must be valid SemVer")
+    match = re.fullmatch(
+        r"(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)"
+        r"(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?"
+        r"(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?", value)
+    if not match:
+        raise ValueError("Theme package version must be valid SemVer")
+    raw_core = tuple(match[index] for index in (1, 2, 3))
+    maximum = "18446744073709551615"
+    if any(len(number) > len(maximum)
+           or len(number) == len(maximum) and number > maximum for number in raw_core):
+        raise ValueError("Theme package version exceeds the supported numeric domain")
+    core = tuple(int(number) for number in raw_core)
+    identifiers = match[4].split(".") if match[4] else []
+    if any(part.isdecimal() and len(part) > 1 and part.startswith("0")
+           for part in identifiers):
+        raise ValueError("Theme package version must be valid SemVer")
+    prerelease = tuple((0, len(part), part) if part.isdecimal() else (1, 0, part)
+                       for part in identifiers)
+    # Build metadata is deliberately absent from precedence.
+    return (*core, not identifiers, prerelease)
 
 def text(value, label, multiline=False):
     if not isinstance(value, str) or not value.strip() or any(
@@ -83,8 +109,7 @@ def package(root):
     if (not isinstance(identity, str) or not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,63}", identity)
             or identity == "builtin" or identity != root.name):
         raise ValueError("Theme ID must match its directory")
-    if manifest.get("package_version") != "0.1.0":
-        raise ValueError("Official theme package versions must remain 0.1.0 before release")
+    precedence(manifest.get("package_version"))
     license = manifest.get("license")
     if not isinstance(license, dict):
         raise ValueError("Theme license metadata is missing")
@@ -107,7 +132,31 @@ def package(root):
                 or any(char.isspace() for char in homepage)):
             raise ValueError("Theme homepage must be an HTTP(S) URL without credentials")
         entry["homepage"] = homepage
-    entry["digest"] = digest(resources(root, manifest, encoded))
+    files = resources(root, manifest, encoded)
+    entry["digest"] = digest(files)
+    entry["resources"] = [
+        {"path": relative, "bytes": len(data),
+         "digest": "sha256:" + hashlib.sha256(data).hexdigest()}
+        for relative, data in sorted(files.items())
+    ]
+    entry["modes"] = ["light", "dark"]
+    entry["previews"] = {
+        mode: manifest[mode]["assets"]["background.window"]["path"]
+        for mode in ("light", "dark")
+        if "background.window" in manifest[mode].get("assets", {})
+    }
+    if (root / "market.json").exists() or (root / "market.json").is_symlink():
+        metadata = json.loads(read(root, "market.json", MANIFEST_LIMIT))
+        if not isinstance(metadata, dict) or set(metadata) - {"description_locales"}:
+            raise ValueError("Invalid theme market metadata")
+        locales = metadata.get("description_locales", {})
+        if not isinstance(locales, dict) or set(locales) - LOCALES:
+            raise ValueError("Invalid theme description locales")
+        if locales:
+            entry["description_locales"] = {
+                locale: text(value, "localized description", multiline=True)
+                for locale, value in sorted(locales.items())
+            }
     return entry
 
 

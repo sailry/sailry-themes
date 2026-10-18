@@ -46,12 +46,47 @@ class Catalog(unittest.TestCase):
         self.assertEqual(result["version"], 1)
         self.assertEqual(len(result["themes"]), 1)
         entry = result["themes"][0]
-        self.assertEqual({key: value for key, value in entry.items() if key != "digest"}, {
+        self.assertEqual({key: value for key, value in entry.items()
+                          if key not in {"digest", "resources", "modes", "previews"}}, {
             "id": "fixture", "path": "fixture", "name": "Fixture", "package_version": "0.1.0",
             "author": "Sailry", "license": "Apache-2.0", "description": "Fixture description",
             "homepage": "https://sailry.dev",
         })
         self.assertRegex(entry["digest"], r"^sha256:[a-f0-9]{64}$")
+
+    def test_indexes_exact_package_resources(self):
+        entry = catalog.catalog(self.root)["themes"][0]
+        files = {resource["path"]: (self.package / resource["path"]).read_bytes()
+                 for resource in entry["resources"]}
+        self.assertEqual(list(files), ["assets/background.png", "theme.json"])
+        self.assertEqual(entry["digest"], catalog.digest(files))
+        for resource in entry["resources"]:
+            encoded = files[resource["path"]]
+            self.assertEqual(resource["bytes"], len(encoded))
+            self.assertEqual(resource["digest"],
+                             "sha256:" + catalog.hashlib.sha256(encoded).hexdigest())
+        self.assertEqual(entry["modes"], ["light", "dark"])
+        self.assertEqual(entry["previews"], {
+            "light": "assets/background.png", "dark": "assets/background.png"})
+
+    def test_keeps_market_metadata_outside_packages(self):
+        initial = catalog.catalog(self.root)["themes"][0]
+        (self.package / "market.json").write_text(json.dumps({
+            "description_locales": {"zh-CN": "主题介绍", "fr": "Description du thème"}
+        }), encoding="utf-8")
+        entry = catalog.catalog(self.root)["themes"][0]
+        self.assertEqual(entry["description_locales"]["zh-CN"], "主题介绍")
+        self.assertEqual(entry["digest"], initial["digest"])
+        self.assertEqual(entry["resources"], initial["resources"])
+
+    def test_rejects_invalid_market_metadata(self):
+        for value in ([], {"archive": "https://example.com/theme.zip"},
+                      {"description_locales": []}, {"description_locales": {"unknown": "text"}},
+                      {"description_locales": {"en": ""}}):
+            with self.subTest(value=value):
+                (self.package / "market.json").write_text(json.dumps(value), encoding="utf-8")
+                with self.assertRaises(ValueError):
+                    catalog.catalog(self.root)
 
     def test_sorts_packages_by_id(self):
         second = self.root / "alpha"
@@ -95,13 +130,37 @@ class Catalog(unittest.TestCase):
             catalog.generate(self.root, check=True)
         self.assertEqual(target.read_bytes(), initial)
 
-    def test_rejects_unreleased_version_bumps(self):
-        for version in ("0.1.1", "1.0.0", 1, None):
+    def test_accepts_semantic_versions(self):
+        for version in ("0.1.1", "1.0.0", "1.2.3-rc.1+build.007"):
             with self.subTest(version=version):
                 self.manifest["package_version"] = version
                 self.write()
-                with self.assertRaisesRegex(ValueError, "must remain 0.1.0"):
+                self.assertEqual(catalog.catalog(self.root)["themes"][0]["package_version"], version)
+
+    def test_rejects_invalid_semantic_versions(self):
+        for version in (1, None, "1", "1.2", "v1.2.3", "01.2.3", "1.2.3-01",
+                        "1.2.3-", "1.2.3+", "1.2.3-alpha..1", "1.2.3\n",
+                        "18446744073709551616.0.0"):
+            with self.subTest(version=version):
+                self.manifest["package_version"] = version
+                self.write()
+                with self.assertRaisesRegex(ValueError, "package version"):
                     catalog.catalog(self.root)
+
+    def test_compares_precedence_without_build_metadata(self):
+        ordered = ["1.0.0-alpha", "1.0.0-alpha.1", "1.0.0-alpha.beta", "1.0.0-beta",
+                   "1.0.0-beta.2", "1.0.0-beta.11", "1.0.0-rc.1", "1.0.0", "1.0.1"]
+        for previous, candidate in zip(ordered, ordered[1:]):
+            self.assertGreater(catalog.precedence(candidate), catalog.precedence(previous))
+        self.assertEqual(catalog.precedence("0.1.0+first"), catalog.precedence("0.1.0+second"))
+        self.assertEqual(catalog.precedence("0.1.0"), catalog.precedence("0.1.0+build"))
+        self.assertLess(catalog.precedence("0.0.9"), catalog.precedence("0.1.0"))
+        initial = catalog.catalog(self.root)["themes"][0]
+        (self.package / "assets/background.png").write_bytes(b"changed resource")
+        changed = catalog.catalog(self.root)["themes"][0]
+        self.assertNotEqual(initial["digest"], changed["digest"])
+        self.assertEqual(catalog.precedence(initial["package_version"]),
+                         catalog.precedence(changed["package_version"]))
 
     def test_rejects_invalid_format_and_identity(self):
         for key, value in (("version", 2), ("version", True), ("id", "other"),
