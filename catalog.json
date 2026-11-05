@@ -5,11 +5,11 @@
       "id": "great-sage",
       "path": "great-sage",
       "name": "Great Sage",
-      "package_version": "0.1.1",
+      "package_version": "0.1.3",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "A theme inspired by the Great Sage, with golden accents and ink landscapes",
-      "digest": "sha256:46b601e84f4fed91289bbab9bbd0317be7f55954b0773abdfaff4d5cde7746e5",
+      "digest": "sha256:7564c69c0350fd118b72b8a5ae77a18bdf65f4dbe840a7bf2a8fe5b7fda0f1c7",
       "resources": [
         {
           "path": "assets/background.png",
@@ -63,8 +63,8 @@
         },
         {
           "path": "theme.json",
-          "bytes": 27544,
-          "digest": "sha256:cbc341b91187e68b4cb32d84913e66a65bfa004341d36711a5f867343ee3197f"
+          "bytes": 27728,
+          "digest": "sha256:ceefd0b8c9281adc369e927b68cd9f6f293dfc7e77528dd8e789be535a1b395e"
         }
       ],
       "modes": [
@@ -91,11 +91,11 @@
       "id": "holographic-rhythm",
       "path": "holographic-rhythm",
       "name": "Holographic Rhythm",
-      "package_version": "0.1.1",
+      "package_version": "0.1.2",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "A blue-to-pink virtual singer above a luminous holographic sky city, with pink technology accents",
-      "digest": "sha256:0df30663c0daa6a4b2c5c18e7175851f183caa63fc7bbbd33b01ef00ce645286",
+      "digest": "sha256:c018cc4d37bb01df9df12ba02ae9c8e1629d4478537ef6d74410548d9a719e24",
       "resources": [
         {
           "path": "assets/background-dark.png",
@@ -154,8 +154,8 @@
         },
         {
           "path": "theme.json",
-          "bytes": 30074,
-          "digest": "sha256:cb2fb80f4846d982006a8cd0589e3e13d5f137e4ea3f7b9f162a721ec9e2d580"
+          "bytes": 30070,
+          "digest": "sha256:ff20294be5a1115ccbc2a4da1d6ab97862c26d5da04db602e7787cbc7778a225"
         }
       ],
       "modes": [
@@ -182,11 +182,11 @@
       "id": "ink-dragon",
       "path": "ink-dragon",
       "name": "Gilded Ink Dragon",
-      "package_version": "0.1.1",
+      "package_version": "0.1.3",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "Modern ink mountains crowned by a silver dragon, with restrained gold foil accents",
-      "digest": "sha256:5a76d158c89207e7252ef0780669a8f12c5ca7079f1147468d55890fdb982269",
+      "digest": "sha256:ade46c0ed3f31c7f99bd2351d74332b04a9cce320e6d4497cc3dfe535f9a36b2",
       "resources": [
         {
           "path": "assets/background-dark.png",
@@ -240,8 +240,8 @@
         },
         {
           "path": "theme.json",
-          "bytes": 27907,
-          "digest": "sha256:4bf0c62f87c185a792f4bd066ef24f727295522d8fa27aaa2953b4ed650a5cd7"
+          "bytes": 27887,
+          "digest": "sha256:b90873c4f895f4423d7b3900d7616c188c673b05a25f82c099008c6a71f4a53b"
         }
       ],
       "modes": [
