@@ -3,7 +3,7 @@
   "id": "holographic-rhythm",
   "name": "Holographic Rhythm",
   "description": "A blue-to-pink virtual singer above a luminous holographic sky city, with pink technology accents",
-  "package_version": "0.1.1",
+  "package_version": "0.1.2",
   "license": {
     "author": "Sailry",
     "name": "Apache-2.0",
@@ -40,11 +40,11 @@
         "accent.background": "#AE3B8720",
         "accent.foreground": "#142D48",
         "tab.background": "#E1EBF7CC",
-        "tab.foreground": "#344B68",
+        "tab.foreground": "#05080E",
         "tab.active.background": "#F7FBFF",
-        "tab.active.foreground": "#752550",
+        "tab.active.foreground": "#05080E",
         "tab_bar.background": "#CCDDEDED",
-        "tab_bar.segmented.background": "#C2D5E8ED",
+        "tab_bar.segmented.background": "#5D7B98",
         "switch.background": "#7C90A9",
         "switch.thumb.background": "#FFF6FC",
         "selection.background": "#AD4B9940",
@@ -83,10 +83,10 @@
         "primary.foreground": "#FFFFFF",
         "primary.hover.background": "#642044",
         "primary.active.background": "#531B38",
-        "button.primary.background": "#752550",
+        "button.primary.background": "#173A58",
         "button.primary.foreground": "#FFFFFF",
-        "button.primary.hover.background": "#642044",
-        "button.primary.active.background": "#531B38"
+        "button.primary.hover.background": "#224D6F",
+        "button.primary.active.background": "#102C45"
       }
     },
     "composer": {
@@ -389,11 +389,11 @@
         "accent.background": "#E6A2D322",
         "accent.foreground": "#F2F7FF",
         "tab.background": "#1B2B45CC",
-        "tab.foreground": "#B4C6DE",
+        "tab.foreground": "#FFFFFF",
         "tab.active.background": "#AB4C8AE6",
         "tab.active.foreground": "#FFFFFF",
         "tab_bar.background": "#0C1A30ED",
-        "tab_bar.segmented.background": "#263B58D9",
+        "tab_bar.segmented.background": "#607694",
         "switch.background": "#637594",
         "switch.thumb.background": "#FFF6FC",
         "selection.background": "#C769B653",
@@ -432,10 +432,10 @@
         "primary.foreground": "#FFF7FD",
         "primary.hover.background": "#92366C",
         "primary.active.background": "#792954",
-        "button.primary.background": "#B44A87",
-        "button.primary.foreground": "#FFF7FD",
-        "button.primary.hover.background": "#92366C",
-        "button.primary.active.background": "#792954"
+        "button.primary.background": "#EDF6FF",
+        "button.primary.foreground": "#142D48",
+        "button.primary.hover.background": "#FFFFFF",
+        "button.primary.active.background": "#CADDEF"
       }
     },
     "composer": {
