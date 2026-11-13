@@ -11,13 +11,14 @@
   Only strictly newer SemVer precedence offers an update. Same-version content
   changes, build metadata alone and older versions do not offer updates. Resource
   digests verify integrity and immutable Git commits capture resource provenance;
-  neither is an update detector. Manifest and catalog format versions remain
-  numeric `1`.
+  neither is an update detector. The current manifest and catalog formats use
+  numeric `1`; format changes belong to the application contract and its consumers.
 - Keep each theme in its ID-named directory. Resources are local raster files
   under `assets/`; do not add remote images, executable code or application UI.
 - Edit `theme.json`, then run `python3 scripts/catalog.py`. Never hand-edit
   `catalog.json`. Run its `--check` mode and the focused fixture tests before
-  committing. The index checks do not replace Sailry's strict import validator.
+  committing package changes. Documentation-only edits need content and link
+  review. The index checks do not replace Sailry's strict import validator.
 - Source, comments, diagnostics and repository guides use English. Preserve
   intentional user-content and Unicode fixtures without artificial escaping.
 - Commit cohesive changes locally. Push only when authorized. The parent

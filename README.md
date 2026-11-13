@@ -62,8 +62,8 @@ New official packages start at `package_version: "0.1.0"`. Content changes,
 including package-local market metadata, increment the semantic version; ordinary
 updates increment the patch. Only strictly newer SemVer precedence offers an
 update. Same-version content changes, build metadata alone and older versions do
-not offer updates. Manifest and catalog format versions remain numeric `1`.
-A package digest is
+not offer updates. The current manifest and catalog formats use numeric `1`,
+independently of each package's release version. A package digest is
 SHA-256 over `theme.json` and its distinct referenced resources, sorted by their
 relative paths. Hash input starts with `Sailry theme package v1` and a zero byte;
 each path and file uses an unsigned 64-bit big-endian byte length followed by
@@ -77,8 +77,9 @@ failure. A digest identifies content; it is not an authorization grant.
 
 Each ID-named directory here is a portable v1 theme source. Import a directory or ZIP
 from Settings → Appearance → Import. Imported packages are stored under
-`<profile>/desktop/themes/<id>/`. Repository directories are not automatically
-installed or embedded in application builds.
+`<profile>/desktop/themes/<id>/`. Application builds embed the reviewed `themes/`
+submodule snapshot through `bundled.go`; that snapshot also supplies offline
+catalog resources. Editing a source directory does not replace an installed copy.
 
 Importing a package with an installed ID replaces that theme, regardless of its
 release version. Selection and light/dark mode are preserved; an active theme
@@ -101,8 +102,9 @@ The numeric `version` remains the manifest format version, not a release version
 Provided descriptions must be nonblank and at most 4 KiB, with ordinary line breaks
 and tabs allowed. Release versions and license names must be nonblank, single-line
 strings of at most 64 and 160 UTF-8 bytes, respectively.
-Colors and sizing in each variant's `theme` use the pinned GPUI Kit ThemeConfig.
-Omitted values inherit Sailry's configured Kit defaults.
+Colors and sizing in each variant's `theme` use Sailry's `Config` and validation
+in `internal/desktop/theme`, rendered through MyGo and Kit. Omitted values inherit
+the application's configured defaults.
 
 ## Composer and buttons
 
@@ -241,9 +243,9 @@ pixels and `duration` is one loop in seconds (3–120). `seed` is an optional un
 clock, capped at 20 redraws per second, with stable loops across viewport changes.
 GIF artwork remains static; these effects do not add a video or script runtime.
 
-Import/check/export use the same v1 parser for this configuration. Updated theme
-packages need a Sailry binary containing this extension; reimport them after
-updating the app. Static artwork remains when theme animation is disabled.
+Import and export use the application's theme parser. The installed application
+must support the declared theme fields. Static artwork remains when theme
+animation is disabled.
 
 ## Chart colors
 
@@ -286,45 +288,25 @@ primary buttons.
 
 ## Checking packages
 
-Use an existing Desktop binary to validate any theme directory or exported ZIP:
+Run the catalog and fixture commands in [Repository and catalog](#repository-and-catalog)
+for package metadata, local paths and resource budgets. The application owns its
+strict manifest parser, raster decoding, import/export behavior and interaction
+checks in `internal/desktop/theme` and the Desktop feature packages.
+
+From the application checkout, the theme package's existing tests are:
 
 ```sh
-/path/to/sailry-harness/target/debug/sailry-desktop --check-theme /path/to/theme
-/path/to/sailry-harness/target/debug/sailry-desktop --check-theme /path/to/theme.zip
+unset GOROOT
+export GOTOOLCHAIN=go1.27.3 CGO_ENABLED=0
+go test ./internal/desktop/theme
 ```
 
-This read-only command uses the same strict parser and image decoder as Import:
-both variants, supported Kit fields and decoration slots, local resource paths,
-licenses, image decoding and resource budgets. It exits with status 1 on failure
-and does not create a window, start a Node, install the theme or open a profile.
-Use the installed application's binary instead of `target/debug` when available.
-Theme edits do not require rebuilding that binary; changes to the theme contract
-require an updated Sailry build.
+Use Settings → Appearance → Import in an isolated development profile to check a
+specific directory or ZIP with the production parser and inspect both variants.
+Theme asset changes can be imported into an existing application binary; changes
+to its parser or renderer require a new build. Static catalog checks do not prove
+rendered contrast, clipping, native interaction or platform acceptance.
 
-The shared audit adds contrast checks for explicit solid hex colors, including
-normal, hover and pressed actions, card text, modal controls and switch tracks:
-
-```sh
-python3 /path/to/sailry-harness/scripts/check-theme.py /path/to/theme --desktop /path/to/sailry-desktop
-```
-
-It accepts multiple theme directories. Without `--desktop`, it audits palettes
-only and explicitly reports that the import schema has not been checked.
-Omitted colors, named colors and gradients remain Kit-resolved; unresolved pairs
-are counted, not treated as passing contrast checks. Measurements use configured
-colors and default panel tint, not rendered UI or user opacity preferences.
-
-Optional image audits require Pillow. They verify referenced image files and
-budgets and sample wallpaper contrast behind the default main-panel tint:
-
-```sh
-python3 -m venv /tmp/sailry-theme-checks
-/tmp/sailry-theme-checks/bin/pip install -r /path/to/sailry-harness/scripts/theme-requirements.txt
-/tmp/sailry-theme-checks/bin/python /path/to/sailry-harness/scripts/check-theme.py /path/to/theme --artwork --desktop /path/to/sailry-desktop
-```
-
-The main repository owns generic loader, interaction and audit tests using
-temporary fixtures. This repository invokes those commands by absolute path without copying the
-application tests. Package-specific checks are optional and
-should cover only distinctive artwork/design requirements. Package checks do
-not establish native interaction or visual acceptance.
+Keep package-specific checks focused on distinctive artwork or design behavior.
+Application loader and interaction tests use temporary fixtures and remain in the
+application repository.
