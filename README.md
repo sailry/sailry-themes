@@ -164,6 +164,9 @@ set its own `opacity` (0–1), `alignment` ([horizontal, vertical], each 0–1),
 and `fill` stretches it. Background slots also accept `tile`, which repeats
 without stretching at `tile_size` logical pixels wide (32–1024, default 256),
 preserving the image's aspect ratio. Repeating textures must have matching edges.
+Corner slots (`*.top_left`, `*.bottom_right`) and `button.new_session` accept
+`outset` (0–32 logical pixels, default 0): how far the ornament reaches past its
+element's edges. Without an outset the button ornament is clipped to the button.
 
 The Great Sage package uses a transparent gold-and-vermilion landscape as a
 window wallpaper with `cover`, and reduces decoration opacity in light mode.
