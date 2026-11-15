@@ -3,7 +3,7 @@
   "id": "great-sage",
   "name": "Great Sage",
   "description": "A theme inspired by the Great Sage, with golden accents and ink landscapes",
-  "package_version": "0.1.6",
+  "package_version": "0.1.7",
   "license": {
     "author": "Sailry",
     "name": "Apache-2.0",
@@ -129,7 +129,13 @@
         "path": "assets/hero.png",
         "fit": "contain",
         "height": 240,
-        "opacity": 1
+        "opacity": 0.78
+      },
+      "hero.new_session.sheen": {
+        "path": "assets/sheen.png",
+        "fit": "contain",
+        "height": 240,
+        "opacity": 0.78
       },
       "composer.top_left": {
         "path": "assets/cloud-top-left.png",
@@ -215,10 +221,10 @@
         "opacity": 0.12
       },
       "button.new_session": {
-        "path": "assets/gilding.png",
+        "path": "assets/button-frame.png",
         "fit": "fill",
         "height": 32,
-        "opacity": 0.65,
+        "opacity": 1,
         "outset": 5
       },
       "message.user.top_left": {
@@ -255,8 +261,7 @@
       "border": "#D9AE5ACC",
       "glow": "#B8402A44",
       "radius": 10,
-      "inner_glow": 0.6,
-      "flow": "#F3CF7F"
+      "inner_glow": 0.6
     },
     "messages": {
       "user": {
@@ -330,6 +335,15 @@
           "opacity": 0.24,
           "size": 6,
           "duration": 7,
+          "seed": 0
+        },
+        {
+          "kind": "sheen",
+          "color": "#FFF0C2",
+          "count": 1,
+          "opacity": 0.75,
+          "size": 5,
+          "duration": 6,
           "seed": 0
         }
       ],
@@ -466,7 +480,13 @@
         "path": "assets/hero.png",
         "fit": "contain",
         "height": 240,
-        "opacity": 1
+        "opacity": 0.85
+      },
+      "hero.new_session.sheen": {
+        "path": "assets/sheen.png",
+        "fit": "contain",
+        "height": 240,
+        "opacity": 0.85
       },
       "composer.top_left": {
         "path": "assets/cloud-top-left.png",
@@ -552,10 +572,10 @@
         "opacity": 0.18
       },
       "button.new_session": {
-        "path": "assets/gilding.png",
+        "path": "assets/button-frame.png",
         "fit": "fill",
         "height": 32,
-        "opacity": 0.65,
+        "opacity": 1,
         "outset": 5
       },
       "message.user.top_left": {
@@ -592,8 +612,7 @@
       "border": "#E2B85E99",
       "glow": "#D7863655",
       "radius": 10,
-      "inner_glow": 0.6,
-      "flow": "#FFE3A0"
+      "inner_glow": 0.6
     },
     "messages": {
       "user": {
@@ -667,6 +686,15 @@
           "opacity": 0.42,
           "size": 6,
           "duration": 7,
+          "seed": 0
+        },
+        {
+          "kind": "sheen",
+          "color": "#FFE7A6",
+          "count": 1,
+          "opacity": 0.9,
+          "size": 5,
+          "duration": 6,
           "seed": 0
         }
       ],

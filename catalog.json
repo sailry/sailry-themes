@@ -5,11 +5,11 @@
       "id": "great-sage",
       "path": "great-sage",
       "name": "Great Sage",
-      "package_version": "0.1.6",
+      "package_version": "0.1.7",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "A theme inspired by the Great Sage, with golden accents and ink landscapes",
-      "digest": "sha256:cbbefaada89990307f82c31a5c6c287a89c6089da413b9e1b1e115bd57910345",
+      "digest": "sha256:752293f11d91304523669b181dc9f44250f195ce6713241e6d334a39c900315e",
       "resources": [
         {
           "path": "assets/background.png",
@@ -20,6 +20,11 @@
           "path": "assets/build.png",
           "bytes": 2299,
           "digest": "sha256:2e53e6ba31aaabb61add93f384656bdd275d3b0bb02170aea61dac76039158e6"
+        },
+        {
+          "path": "assets/button-frame.png",
+          "bytes": 14806,
+          "digest": "sha256:728d9e3708a3436f6ad13b9874d862e229a20c551243929a96f7b84f5384ceb8"
         },
         {
           "path": "assets/cloud-bottom-right.png",
@@ -35,11 +40,6 @@
           "path": "assets/explore.png",
           "bytes": 2878,
           "digest": "sha256:abea9dcfecf0077bf10edb987892dd6bcb7a5ddb737db9b9727d8be272470e79"
-        },
-        {
-          "path": "assets/gilding.png",
-          "bytes": 24694,
-          "digest": "sha256:6548ca78ca3f913a849ff9c5e594a5849c857c13a405a99af73361983d2db0ea"
         },
         {
           "path": "assets/grain.png",
@@ -62,9 +62,14 @@
           "digest": "sha256:af96ab808bca1d1492dda0879a93a606c59ad6ba557ab24cc3327c6a46f7be14"
         },
         {
+          "path": "assets/sheen.png",
+          "bytes": 34628,
+          "digest": "sha256:1c367304475f1a599dc1654efe6740945ca14ffd9a0e5ed5201f616eacc7987f"
+        },
+        {
           "path": "theme.json",
-          "bytes": 28623,
-          "digest": "sha256:4b4bad6d6eae385138afe23f1889bad8c356cc74352bc1d6b49908068431357d"
+          "bytes": 29272,
+          "digest": "sha256:b92eb2ce04923cb17dad08a1111303c06f4d45ea5e859204cc8bbb0016f6db28"
         }
       ],
       "modes": [

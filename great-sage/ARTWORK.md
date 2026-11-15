@@ -65,24 +65,29 @@ The sidebar reuses these original illustrations at 16 pixels. Production icons a
 
 Use case: stylized-concept. Subtle seamless tileable transparent square PNG texture for small dark-gold-red Chinese mythology cards. Only sparse antique bronze and muted gold dry-brush fibers, fine dust and tiny ink speckles, dispersed with matching edges. Genuine transparent alpha across most pixels, no paper or black rectangle. Delicate irregular grain, low contrast at reduced opacity over brown or ivory panels. No clouds, mountains, scene, shapes, text, icons, frames, broad washes or painted checkerboard.
 
-### Button edge gilding
+### button-frame.png
 
-The rejected inset circlet frame was replaced with broken gold leaf at the actual
-button edges. No separate capsule outline is included. The `button.new_session`
-slot uses full-width fill at 32 logical pixels and 65% opacity, matching the Kit
-button's bounds and corner clip. The texture has no geometric frame to distort,
-and its transparent center leaves the live caption untouched. The 768 × 258
-indexed PNG retains generated alpha; downsizing and palette compression are the
-only postprocessing. The frame resource was removed from the package.
+The New Session button's frame: an antique-gold cloud scroll at its top-left and
+bottom-right corners, on fine gold lines that fade into the button's own gold
+edge. The `button.new_session` slot fills the button and its 5-pixel outset at
+full opacity; the caption's middle stays clear. One corner was generated over
+black with gpt-6.1-sol, its alpha taken from its brightness, and composed at
+four times the 226 × 42 logical strip: the corner, and the same corner turned
+half a turn for the opposite one. Indexing to 256 colors is the only other
+postprocessing. Prompt:
+
+A single antique-gold engraved Chinese auspicious-cloud (祥云) corner ornament for the TOP-LEFT corner of an ornate lacquer button frame, in a black, gold and red Monkey King painterly style: a fine double gold line runs along the top edge and down the left edge, meeting in a softly rounded corner that carries one elegant curling cloud scroll. Burnished gold with tiny highlights, crisp and refined. Lines reach the right and bottom edges of the image. Pure flat black #000000 background, nothing else, no text, no red fill.
 
 The existing `grain.png` is reused as a content-panel texture as well as on cards.
-It tiles at its native 256-pixel size without generating another image. Primary
-buttons use solid warm-black fills. Send and Stop use separate high-contrast
-solid fills with Kit vector glyphs.
+It tiles at its native 256-pixel size without generating another image. Send and
+Stop use separate high-contrast solid fills with Kit vector glyphs.
 
-Generated with the built-in OpenAI imagegen tool using this prompt:
+### sheen.png
 
-Use case: stylized-concept. Asset type: transparent gold-leaf EDGE TEXTURE overlay for a Sun Wukong burgundy lacquer UI button. Generate original gilding texture only, NOT a frame or object. Wide 3:1 canvas, genuine transparent alpha. Fine irregular antique gold leaf fragments and tiny burnished gold engraved streaks MUST TOUCH the actual canvas boundaries: a refined patch along the top-left edge, thinning out along the upper edge; a smaller balanced patch along the bottom-right edge, thinning along the bottom edge. The gold looks fused into worn red lacquer, but DO NOT paint any red or button surface: only the gold pixels are present. Edge zones are at most the outermost 12 percent of canvas height, and the two corner patches cover at most 18 percent of width. Keep the entire central 75 percent completely transparent for live text. Gold leaf has convincing bright micro-highlights, etched grooves, aged bronze shadows and sparse tiny flakes. Flat irregular gilded edge detail with understated luxuriant material finish, no glow. There must be NO enclosed loop, NO complete outline, NO capsule, NO oval, NO rounded rectangle, NO inner rim, NO clouds, NO circlet, NO central flourish, NO text, NO label, NO button background, NO border offset from image edges, NO transparent padding outside the outermost gold. Texture is intended to stretch across a 223x32px button, with corners clipped by the real button's radius, so avoid recognizable shapes that stretching would distort. Only the upper-left and lower-right EDGE gold textures, on transparent background.
+The mask of the hero's sheen: the gold of the staff, the cape's cloud patterns,
+the armor and the somersault cloud, taken from `hero.png` by color (warm,
+saturated and bright pixels), softened by a 1.2-pixel blur and indexed. It is
+not generated artwork.
 
 ### Send glyph refinement
 

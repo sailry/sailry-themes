@@ -216,6 +216,9 @@ the welcome page reserves that space, so it covers nothing above. A variant's
 `float` (0–12 pixels) lets it drift up and down over six seconds while theme
 animation is on. Over a banner card, hero effects drift across the whole hero,
 past the card's frame.
+The optional `hero.new_session.sheen` (requires the hero, with the hero's `fit`,
+`height` and `alignment`) is a mask for the `sheen` effect: where it is opaque, a
+band of light sweeps across the hero.
 
 ## Message surfaces and wordmark
 
@@ -284,11 +287,14 @@ colors remain visible on light surfaces. Do not brighten the wallpaper to
 compensate for particles hidden by a panel tint.
 
 Kinds are `twinkle` (stars), `embers` (rising sparks), `dust` (drifting specks),
-`petals` (falling curved petals), `pulse` (soft halo) and `scan` (moving light line).
+`petals` (falling curved petals), `pulse` (soft halo), `scan` (moving light line)
+and `sheen` (a diagonal band of light crossing the hero, `hero.new_session` only,
+through its `hero.new_session.sheen` mask, `size` × 2% of the hero wide, over a
+faint glow breathing in the mask).
 `color` uses Kit's solid color syntax; `opacity` is 0–1, `size` is 0.5–12 logical
 pixels and `duration` is one loop in seconds (3–120). `seed` is an optional unsigned
 32-bit value for repeatable placement. Each target accepts 1–4 layers, each layer
-1–64 particles, and each variant at most 192 particles. Pulse and scan require
+1–64 particles, and each variant at most 192 particles. Pulse, scan and sheen require
 `count: 1`; their extent follows the target bounds. Motion uses Kit's animation
 clock, capped at 20 redraws per second, with stable loops across viewport changes.
 GIF artwork remains static; these effects do not add a video or script runtime.

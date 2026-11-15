@@ -41,6 +41,6 @@ python3 -m unittest discover -s tests -v
 ```
 
 These checks validate PNG resources, resource budgets, wallpaper resolution and
-transparency, button, switch and modal-tab contrast, clear gilding caption space, and
+transparency, button, switch and modal-tab contrast, clear button-frame caption space, and
 translucent card states. Native import and control interaction
 behavior belongs to Sailry's generic theme mechanism tests.

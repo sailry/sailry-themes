@@ -130,17 +130,21 @@ class Package(unittest.TestCase):
                 with self.subTest(mode=variant["theme"]["mode"], track=track):
                     self.assertGreaterEqual(contrast(colors["switch.thumb.background"], track), 3)
 
-    def test_gilding_transparency(self):
+    def test_button_frame_caption_space(self):
         for variant in self.variants:
-            gilding = variant["assets"]["button.new_session"]
-            with Image.open(ROOT / gilding["path"]) as image:
+            frame = variant["assets"]["button.new_session"]
+            with Image.open(ROOT / frame["path"]) as image:
                 alpha = image.convert("RGBA").getchannel("A")
-                # The edge texture must leave the caption free of gold fill.
+                # The frame leaves the caption free of gold.
                 opening = alpha.crop((image.width // 4, image.height * 3 // 8,
                                       image.width * 3 // 4, image.height * 9 // 16))
                 self.assertLessEqual(opening.getextrema()[1], 2)
-                visible = alpha.point(lambda value: 255 if value >= 32 else 0)
-                self.assertEqual(visible.getbbox(), (0, 0, image.width, image.height))
+                # Its corner clouds sit at opposite corners of the button.
+                left, top, right, bottom = alpha.point(lambda value: 255 if value >= 32 else 0).getbbox()
+                self.assertLess(left, image.width // 16)
+                self.assertGreater(right, image.width * 15 // 16)
+                self.assertLess(top, image.height // 8)
+                self.assertGreater(bottom, image.height * 7 // 8)
 
     def test_wallpaper_text_contrast(self):
         for variant in self.variants:
