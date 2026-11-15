@@ -5,11 +5,11 @@
       "id": "great-sage",
       "path": "great-sage",
       "name": "Great Sage",
-      "package_version": "0.1.8",
+      "package_version": "0.1.9",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "A theme inspired by the Great Sage, with golden accents and ink landscapes",
-      "digest": "sha256:26c2b8caf900c6c2384efd6f29cd58e07cacb480079e2c0dc994b0679fcf8f22",
+      "digest": "sha256:701684b7d31a7582a937eae464658d7cb4d04eece399c51cdc9c525c25f3b5c2",
       "resources": [
         {
           "path": "assets/background.png",
@@ -68,8 +68,8 @@
         },
         {
           "path": "theme.json",
-          "bytes": 28883,
-          "digest": "sha256:fc1eabc6d5dfe369e46ea653eb7ac3ebf4a37806f0592620d31352201a09e56a"
+          "bytes": 28833,
+          "digest": "sha256:bd26ec527e379c1bab510f026310cd304f1800cb7a18b900ec69fd7367c759fe"
         }
       ],
       "modes": [
