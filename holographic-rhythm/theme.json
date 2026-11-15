@@ -3,7 +3,7 @@
   "id": "holographic-rhythm",
   "name": "Holographic Rhythm",
   "description": "An original virtual idol above a holographic night city, with cyan and pink accents",
-  "package_version": "0.2.5",
+  "package_version": "0.2.6",
   "license": {
     "author": "Sailry",
     "name": "Apache-2.0",
@@ -98,7 +98,8 @@
         "active": "#178CBD",
         "foreground": "#FFFFFF",
         "border": "#FFFFFF99",
-        "glow": "#B07CFF55"
+        "glow": "#B07CFF55",
+        "inner_glow": 0.7
       },
       "stop": {
         "background": "#1FA3D8",
@@ -107,7 +108,8 @@
         "active": "#178CBD",
         "foreground": "#FFFFFF",
         "border": "#FFFFFF99",
-        "glow": "#B07CFF55"
+        "glow": "#B07CFF55",
+        "inner_glow": 0.7
       },
       "border": "#2FA6D6",
       "border_gradient": "#D861AE",
@@ -127,7 +129,8 @@
         "border": "#B66DAB38",
         "border_width": 1,
         "radius": 14,
-        "icon_background": "#0E7FA31F"
+        "icon_background": "#0E7FA31F",
+        "inner_glow": 0.5
       },
       "build": {
         "background": "#F0F7FFDB",
@@ -139,7 +142,8 @@
         "border": "#B66DAB38",
         "border_width": 1,
         "radius": 14,
-        "icon_background": "#C2347F1F"
+        "icon_background": "#C2347F1F",
+        "inner_glow": 0.5
       },
       "review": {
         "background": "#F0F7FFDB",
@@ -151,7 +155,8 @@
         "border": "#B66DAB38",
         "border_width": 1,
         "radius": 14,
-        "icon_background": "#6E52D11F"
+        "icon_background": "#6E52D11F",
+        "inner_glow": 0.5
       },
       "plan": {
         "background": "#F0F7FFDB",
@@ -163,7 +168,8 @@
         "border": "#B66DAB38",
         "border_width": 1,
         "radius": 14,
-        "icon_background": "#16896A1F"
+        "icon_background": "#16896A1F",
+        "inner_glow": 0.5
       }
     },
     "messages": {
@@ -382,7 +388,10 @@
       "active": "#178CBD",
       "foreground": "#FFFFFF",
       "border": "#FFFFFF99",
-      "glow": "#B07CFF55"
+      "glow": "#B07CFF55",
+      "radius": 16,
+      "inner_glow": 0.9,
+      "flow": "#9BE8FF"
     },
     "hero": {
       "border": "#2FA6D6AA",
@@ -479,7 +488,8 @@
         "active": "#2AB6E0",
         "foreground": "#FFFFFF",
         "border": "#FFFFFF66",
-        "glow": "#B07CFF88"
+        "glow": "#B07CFF88",
+        "inner_glow": 0.7
       },
       "stop": {
         "background": "#3CCBF4",
@@ -488,7 +498,8 @@
         "active": "#2AB6E0",
         "foreground": "#FFFFFF",
         "border": "#FFFFFF66",
-        "glow": "#B07CFF88"
+        "glow": "#B07CFF88",
+        "inner_glow": 0.7
       },
       "border": "#7FE7FF",
       "border_gradient": "#FF8AD0",
@@ -505,12 +516,13 @@
         "icon": "#7FE7FF",
         "hover": "#1A4560E0",
         "active": "#22516FE6",
-        "border": "#7FE7FFB0",
+        "border": "#7FE7FFF0",
         "border_width": 1,
         "radius": 14,
         "icon_background": "#7FE7FF2E",
-        "glow": "#7FE7FF45",
-        "gradient": "#163650E6"
+        "glow": "#7FE7FF70",
+        "gradient": "#163650E6",
+        "inner_glow": 0.7
       },
       "build": {
         "background": "#723C80D1",
@@ -519,12 +531,13 @@
         "icon": "#FF8AD0",
         "hover": "#3D2552E0",
         "active": "#4A2E63E6",
-        "border": "#FF8AD0B0",
+        "border": "#FF8AD0F0",
         "border_width": 1,
         "radius": 14,
         "icon_background": "#FF8AD02E",
-        "glow": "#FF8AD045",
-        "gradient": "#3A1E4CE6"
+        "glow": "#FF8AD070",
+        "gradient": "#3A1E4CE6",
+        "inner_glow": 0.7
       },
       "review": {
         "background": "#4D46A6D1",
@@ -533,12 +546,13 @@
         "icon": "#B79CFF",
         "hover": "#2C2B60E0",
         "active": "#36346FE6",
-        "border": "#B79CFFB0",
+        "border": "#B79CFFF0",
         "border_width": 1,
         "radius": 14,
         "icon_background": "#B79CFF2E",
-        "glow": "#B79CFF45",
-        "gradient": "#25245EE6"
+        "glow": "#B79CFF70",
+        "gradient": "#25245EE6",
+        "inner_glow": 0.7
       },
       "plan": {
         "background": "#2C7F74D1",
@@ -547,12 +561,13 @@
         "icon": "#7FFFD0",
         "hover": "#1A4B4BE0",
         "active": "#225858E6",
-        "border": "#7FFFD0B0",
+        "border": "#7FFFD0F0",
         "border_width": 1,
         "radius": 14,
         "icon_background": "#7FFFD02E",
-        "glow": "#7FFFD045",
-        "gradient": "#154440E6"
+        "glow": "#7FFFD070",
+        "gradient": "#154440E6",
+        "inner_glow": 0.7
       }
     },
     "messages": {
@@ -801,13 +816,16 @@
       ]
     },
     "new_session": {
-      "background": "#3CCBF4",
-      "gradient": "#E266CF",
-      "hover": "#5AD6F7",
-      "active": "#2AB6E0",
+      "background": "#30BDF0",
+      "gradient": "#D458C8",
+      "hover": "#4CC8F3",
+      "active": "#22A8DA",
       "foreground": "#FFFFFF",
       "border": "#FFFFFF66",
-      "glow": "#B07CFF88"
+      "glow": "#B07CFF88",
+      "radius": 16,
+      "inner_glow": 0.9,
+      "flow": "#C9F6FF"
     },
     "hero": {
       "border": "#7FE7FFCC",

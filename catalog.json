@@ -91,11 +91,11 @@
       "id": "holographic-rhythm",
       "path": "holographic-rhythm",
       "name": "Holographic Rhythm",
-      "package_version": "0.2.5",
+      "package_version": "0.2.6",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "An original virtual idol above a holographic night city, with cyan and pink accents",
-      "digest": "sha256:cb9d4e32d26ae041fea6989ffa3c0d331d6597335ebdb44d5eded4a78d74caac",
+      "digest": "sha256:e80f197d899e1eda682142a9020c6dda6f2e63ab6cf1603da400f43803a5e67c",
       "resources": [
         {
           "path": "assets/background-dark.png",
@@ -159,8 +159,8 @@
         },
         {
           "path": "theme.json",
-          "bytes": 32812,
-          "digest": "sha256:1249244129f556028ddb57455a6cdad4bca902439baefd98f015ca383557ca7e"
+          "bytes": 33276,
+          "digest": "sha256:bb825fc646603a93f50d159a94cc214c39e65e1ca2d22a443e4225cffa28dd23"
         }
       ],
       "modes": [

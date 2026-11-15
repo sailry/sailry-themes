@@ -123,7 +123,10 @@ Decorations paint behind content without taking input focus or installing action
 Any of these color objects may add `glow`, a soft light around the button,
 `border`, a hairline edge, and
 `gradient`: the fill then runs from the
-state's color on the left to that color on the right. A variant's optional
+state's color on the left to that color on the right. `radius` (0–32) rounds the button
+in place of the theme radius, half its height or more making a pill; `inner_glow` (0–1)
+lights its rim from inside; `flow`, a color, runs two small lights around its edge while
+theme motion is on. A variant's optional
 `new_session` object, with the same fields, colors the sidebar's New
 Conversation button.
 
@@ -156,7 +159,8 @@ assets add noninteractive textures, clipped to the card radius behind its conten
 
 A card's optional `glow` adds a soft light around it, and `icon_background`
 draws a rounded tile behind its icon. `gradient` runs the card's fill from its
-state's color at the top to that color at the bottom.
+state's color at the top to that color at the bottom. `inner_glow` (0–1) lights the
+card's rim from inside in its border color.
 
 ## Window backgrounds and sidebar headings
 
