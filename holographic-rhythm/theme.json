@@ -3,7 +3,7 @@
   "id": "holographic-rhythm",
   "name": "Holographic Rhythm",
   "description": "An original virtual idol above a holographic night city, with cyan and pink accents",
-  "package_version": "0.2.4",
+  "package_version": "0.2.5",
   "license": {
     "author": "Sailry",
     "name": "Apache-2.0",
@@ -113,7 +113,8 @@
       "border_gradient": "#D861AE",
       "glow": "#8C7BFF33",
       "placeholder": "#3F86A8",
-      "background": "#FFFFFF"
+      "background": "#FFFFFF",
+      "inner_glow": 0.5
     },
     "cards": {
       "explore": {
@@ -493,7 +494,8 @@
       "border_gradient": "#FF8AD0",
       "glow": "#9C7BFF66",
       "placeholder": "#A9E9FF",
-      "background": "#1A2452"
+      "background": "#34497F",
+      "inner_glow": 0.8
     },
     "cards": {
       "explore": {

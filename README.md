@@ -112,7 +112,8 @@ Each variant may set `composer.border_width` (0–4 logical pixels). The color u
 Kit's `input.border` token unless `composer.border` sets one; with
 `composer.border_gradient` the edge runs from that color on the left to the
 gradient color on the right. `composer.background` replaces the frosted surface's fill and `composer.glow`
-adds a soft light around the surface and `composer.placeholder` colors the empty draft's text. The surface
+adds a soft light around the surface and `composer.placeholder` colors the empty draft's text.
+`composer.inner_glow` (0–1, with a border width) lights the surface's rim from inside in the edge's colors. The surface
 and radius retain their Kit theme tokens. The default width is zero.
 
 The optional `composer.top_left` and `composer.bottom_right` assets draw fixed-size,
