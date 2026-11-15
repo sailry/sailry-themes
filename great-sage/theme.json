@@ -3,7 +3,7 @@
   "id": "great-sage",
   "name": "Great Sage",
   "description": "A theme inspired by the Great Sage, with golden accents and ink landscapes",
-  "package_version": "0.1.5",
+  "package_version": "0.1.6",
   "license": {
     "author": "Sailry",
     "name": "Apache-2.0",
@@ -241,8 +241,22 @@
       }
     },
     "wordmark": {
-      "foreground": "#866017",
-      "glow": "#BF8530"
+      "foreground": "#9A6A18",
+      "gradient": "#A3301E",
+      "glow": "#C98A2E",
+      "base": 0.85
+    },
+    "new_session": {
+      "background": "#9E2A1C",
+      "gradient": "#B8402A",
+      "hover": "#AE3322",
+      "active": "#86221A",
+      "foreground": "#FFF1D8",
+      "border": "#D9AE5ACC",
+      "glow": "#B8402A44",
+      "radius": 10,
+      "inner_glow": 0.6,
+      "flow": "#F3CF7F"
     },
     "messages": {
       "user": {
@@ -564,8 +578,22 @@
       }
     },
     "wordmark": {
-      "foreground": "#E7BF6C",
-      "glow": "#D78636"
+      "foreground": "#F2CB75",
+      "gradient": "#D2482C",
+      "glow": "#E89A3C",
+      "base": 0.9
+    },
+    "new_session": {
+      "background": "#8E2318",
+      "gradient": "#B33A24",
+      "hover": "#A12C1E",
+      "active": "#741C14",
+      "foreground": "#F8DC98",
+      "border": "#E2B85E99",
+      "glow": "#D7863655",
+      "radius": 10,
+      "inner_glow": 0.6,
+      "flow": "#FFE3A0"
     },
     "messages": {
       "user": {
@@ -654,5 +682,10 @@
         }
       ]
     }
+  },
+  "surfaces": {
+    "main": 0.8,
+    "sidebar": 0.45,
+    "blur": 0
   }
 }

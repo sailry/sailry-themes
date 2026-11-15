@@ -19,7 +19,7 @@ Generated with gpt-6.1-sol from the approved full-window concept, which was
 itself generated from a text description over a screenshot of Sailry's
 unthemed layout, with no character or pose reference. Prompt:
 
-From the attached mockup, paint ONLY the Monkey King as a standalone cutout for compositing: the same character, costume, painting style, airborne pose with the golden staff swung overhead in both hands, and his flowing red ink-wash cape, seen from behind at an angle. He has NO tail. Full body including the whole staff and cape, fully inside the frame with margin. No UI, no text, no clouds, no mountains, no palace, no background scenery. Background: a perfectly flat, uniform chroma-key green #00FF00 everywhere around him, with no shadows, glow or gradients on it, and no green anywhere on the character.
+From the attached mockup, paint ONLY the Monkey King together with the golden somersault cloud (筋斗云) he leaps from, as one standalone cutout for compositing: the same character, costume, painting style, airborne pose with the golden staff swung overhead in both hands, his flowing red ink-wash cape, and the swirling gold-outlined auspicious cloud below and behind his feet. Seen from behind at an angle. He has NO tail. Everything fully inside the frame with margin. No UI, no text, no mountains, no palace, no other scenery. Background: a perfectly flat, uniform chroma-key green #00FF00 everywhere around him, with no shadows, glow or gradients on it, and no green anywhere on the character or cloud.
 
 The green ground was keyed to alpha with spill removed, then the figure was
 trimmed, scaled to 720 pixels high and indexed.
