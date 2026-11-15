@@ -3,7 +3,7 @@
   "id": "holographic-rhythm",
   "name": "Holographic Rhythm",
   "description": "An original virtual idol above a holographic night city, with cyan and pink accents",
-  "package_version": "0.2.3",
+  "package_version": "0.2.4",
   "license": {
     "author": "Sailry",
     "name": "Apache-2.0",
@@ -270,6 +270,24 @@
         "height": 264,
         "opacity": 1,
         "float": 5
+      },
+      "background.content": {
+        "path": "assets/background.png",
+        "fit": "cover",
+        "alignment": [
+          0.5,
+          1
+        ],
+        "opacity": 0.4
+      },
+      "background.sidebar": {
+        "path": "assets/background.png",
+        "fit": "cover",
+        "alignment": [
+          0,
+          1
+        ],
+        "opacity": 0.4
       }
     },
     "effects": {
@@ -475,7 +493,7 @@
       "border_gradient": "#FF8AD0",
       "glow": "#9C7BFF66",
       "placeholder": "#A9E9FF",
-      "background": "#26366E"
+      "background": "#1A2452"
     },
     "cards": {
       "explore": {
@@ -548,9 +566,9 @@
       }
     },
     "wordmark": {
-      "foreground": "#7FE7FF",
-      "gradient": "#FF8AD0",
-      "glow": "#FFFFFF",
+      "foreground": "#3FD9FF",
+      "gradient": "#FF6AD5",
+      "glow": "#C9A8FF",
       "base": 1
     },
     "assets": {
@@ -676,6 +694,24 @@
         "height": 264,
         "opacity": 1,
         "float": 5
+      },
+      "background.content": {
+        "path": "assets/background-dark.png",
+        "fit": "cover",
+        "alignment": [
+          0.5,
+          1
+        ],
+        "opacity": 0.7
+      },
+      "background.sidebar": {
+        "path": "assets/background-dark.png",
+        "fit": "cover",
+        "alignment": [
+          0,
+          1
+        ],
+        "opacity": 0.55
       }
     },
     "effects": {
