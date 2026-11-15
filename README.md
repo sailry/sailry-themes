@@ -109,12 +109,21 @@ the application's configured defaults.
 ## Composer and buttons
 
 Each variant may set `composer.border_width` (0–4 logical pixels). The color uses
-Kit's `input.border` token; the surface and radius retain their Kit theme tokens.
-The default width is zero.
+Kit's `input.border` token unless `composer.border` sets one; with
+`composer.border_gradient` the edge runs from that color on the left to the
+gradient color on the right. `composer.glow` adds a soft light around the
+surface and `composer.placeholder` colors the empty draft's text. The surface
+and radius retain their Kit theme tokens. The default width is zero.
 
 The optional `composer.top_left` and `composer.bottom_right` assets draw fixed-size,
 transparent corner ornaments. Their `height` is the square size (16–96 pixels).
 Decorations paint behind content without taking input focus or installing actions.
+
+Any of these color objects may add `glow`, a soft light around the button, and
+`gradient`: the fill then runs from the
+state's color on the left to that color on the right. A variant's optional
+`new_session` object, with the same fields, colors the sidebar's New
+Conversation button.
 
 `icon.send` and `icon.stop` replace the two distinct button glyphs.
 `button.send` and `button.stop` optionally add image textures beneath them.
@@ -143,6 +152,9 @@ retain Kit's normal tint. Optional `background.card.explore`,
 `background.card.build`, `background.card.review` and `background.card.plan`
 assets add noninteractive textures, clipped to the card radius behind its content.
 
+A card's optional `glow` adds a soft light around it, and `icon_background`
+draws a rounded tile behind its icon.
+
 ## Window backgrounds and sidebar headings
 
 `background.window` draws once behind the entire Shell, including navigation,
@@ -154,6 +166,15 @@ Sidebar group headings have default Kit icons. The `icon.group.hosts`,
 `icon.group.activity`, `icon.group.unassigned`, `icon.group.projects` and
 `icon.group.recent` assets replace their 16-pixel glyphs without changing group
 labels, disclosure controls or keyboard interaction.
+
+`sidebar.accent.background` and `sidebar.accent.foreground` mark the chosen
+navigation item: the sidebar's selected row and the rail's current destination.
+Without them both keep Kit's neutral selection.
+
+A package may set top-level `surfaces` (`main` and `sidebar` opacity 0.45–1,
+`blur` 0–1), the Appearance transparency sliders' values. Choosing the theme
+applies them; the sliders adjust from there. Without it the application
+defaults apply.
 
 ## Raster decorations
 
@@ -183,7 +204,10 @@ the large theme radius, edged with `input.border`, its effects drawn over it.
 The optional `hero.new_session.figure` (16–360 pixels, requires the hero) is a
 transparent cutout standing on the banner's bottom edge, placed across it by its
 horizontal `alignment`. A figure taller than the banner rises above its top edge;
-the welcome page reserves that space, so it covers nothing above.
+the welcome page reserves that space, so it covers nothing above. The figure's
+`float` (0–12 pixels) lets it drift up and down over six seconds while theme
+animation is on. Over a banner card, hero effects drift across the whole hero,
+past the card's frame.
 
 ## Message surfaces and wordmark
 
@@ -202,6 +226,9 @@ transparent corner ornaments (16–96 pixels), clipped within the surface.
 
 `wordmark.foreground` and `wordmark.glow` independently color the welcome page's
 square particles and their illumination. Defaults follow Kit's foreground.
+`wordmark.gradient` shades the lettering from `foreground` at its left to that
+color at its right, and `wordmark.base` (0–1, default 0.18) is its strength at
+rest, before the light passing under the pointer.
 
 `button.new_session` overlays an eventless, full-width top-edge ornament on the
 sidebar's existing New Conversation button. Its `height` is 4–96 pixels; a thin

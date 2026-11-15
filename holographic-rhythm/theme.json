@@ -3,7 +3,7 @@
   "id": "holographic-rhythm",
   "name": "Holographic Rhythm",
   "description": "An original virtual idol above a holographic night city, with cyan and pink accents",
-  "package_version": "0.2.0",
+  "package_version": "0.2.2",
   "license": {
     "author": "Sailry",
     "name": "Apache-2.0",
@@ -25,8 +25,8 @@
         "sidebar.background": "#E8F3FC",
         "sidebar.foreground": "#142D48",
         "sidebar.border": "#6C9DC03D",
-        "sidebar.accent.background": "#C64B9920",
-        "sidebar.accent.foreground": "#142D48",
+        "sidebar.accent.background": "#8C6BFF26",
+        "sidebar.accent.foreground": "#2A1F55",
         "sidebar.primary.background": "#752550",
         "sidebar.primary.foreground": "#FFFFFF",
         "group_box.background": "#F0F7FFF2",
@@ -92,17 +92,24 @@
     "composer": {
       "border_width": 1,
       "send": {
-        "background": "#173A58",
+        "background": "#2FA6D6",
+        "gradient": "#D861AE",
         "foreground": "#FFFFFF",
-        "hover": "#224D6F",
-        "active": "#102C45"
+        "hover": "#45B3DF",
+        "active": "#2491BE",
+        "glow": "#D861AE40"
       },
       "stop": {
-        "background": "#173A58",
+        "background": "#2FA6D6",
+        "gradient": "#D861AE",
         "foreground": "#FFFFFF",
-        "hover": "#224D6F",
-        "active": "#102C45"
-      }
+        "hover": "#45B3DF",
+        "active": "#2491BE"
+      },
+      "border": "#2FA6D690",
+      "border_gradient": "#D861AE90",
+      "glow": "#8C7BFF22",
+      "placeholder": "#3F86A8"
     },
     "cards": {
       "explore": {
@@ -114,7 +121,8 @@
         "active": "#DAE7F7E6",
         "border": "#B66DAB38",
         "border_width": 1,
-        "radius": 14
+        "radius": 14,
+        "icon_background": "#0E7FA31F"
       },
       "build": {
         "background": "#F0F7FFDB",
@@ -125,7 +133,8 @@
         "active": "#DAE7F7E6",
         "border": "#B66DAB38",
         "border_width": 1,
-        "radius": 14
+        "radius": 14,
+        "icon_background": "#C2347F1F"
       },
       "review": {
         "background": "#F0F7FFDB",
@@ -136,7 +145,8 @@
         "active": "#DAE7F7E6",
         "border": "#B66DAB38",
         "border_width": 1,
-        "radius": 14
+        "radius": 14,
+        "icon_background": "#6E52D11F"
       },
       "plan": {
         "background": "#F0F7FFDB",
@@ -147,7 +157,8 @@
         "active": "#DAE7F7E6",
         "border": "#B66DAB38",
         "border_width": 1,
-        "radius": 14
+        "radius": 14,
+        "icon_background": "#16896A1F"
       }
     },
     "messages": {
@@ -163,8 +174,10 @@
       }
     },
     "wordmark": {
-      "foreground": "#174267",
-      "glow": "#9B75CB"
+      "foreground": "#1B9AC6",
+      "gradient": "#CF4FA0",
+      "glow": "#6E52D1",
+      "base": 0.92
     },
     "assets": {
       "background.window": {
@@ -181,9 +194,9 @@
         "fit": "cover",
         "alignment": [
           0.5,
-          0.5
+          0.42
         ],
-        "height": 168,
+        "height": 196,
         "opacity": 1
       },
       "composer.top_left": {
@@ -204,7 +217,7 @@
         "path": "assets/button-trace.png",
         "fit": "fill",
         "height": 32,
-        "opacity": 0.65,
+        "opacity": 0.5,
         "outset": 5
       },
       "background.card.explore": {
@@ -250,8 +263,9 @@
           0.84,
           1
         ],
-        "height": 236,
-        "opacity": 1
+        "height": 264,
+        "opacity": 1,
+        "float": 5
       }
     },
     "effects": {
@@ -308,11 +322,20 @@
       ],
       "hero.new_session": [
         {
+          "kind": "petals",
+          "color": "#E57BBE",
+          "count": 9,
+          "opacity": 0.85,
+          "size": 4.0,
+          "duration": 14,
+          "seed": 91
+        },
+        {
           "kind": "twinkle",
-          "color": "#FFE1F4",
-          "count": 10,
-          "opacity": 0.8,
-          "size": 3.0,
+          "color": "#3CB4DA",
+          "count": 12,
+          "opacity": 0.9,
+          "size": 3.4,
           "duration": 6,
           "seed": 83
         }
@@ -328,6 +351,14 @@
           "seed": 97
         }
       ]
+    },
+    "new_session": {
+      "background": "#2FA6D6",
+      "gradient": "#D861AE",
+      "foreground": "#FFFFFF",
+      "hover": "#45B3DF",
+      "active": "#2491BE",
+      "glow": "#D861AE40"
     }
   },
   "dark": {
@@ -346,8 +377,8 @@
         "sidebar.background": "#14243F",
         "sidebar.foreground": "#F2F7FF",
         "sidebar.border": "#ADBFE62E",
-        "sidebar.accent.background": "#EE90CD26",
-        "sidebar.accent.foreground": "#F2F7FF",
+        "sidebar.accent.background": "#8C6BFF66",
+        "sidebar.accent.foreground": "#FFFFFF",
         "sidebar.primary.background": "#AB427F",
         "sidebar.primary.foreground": "#FFF7FD",
         "group_box.background": "#152741F2",
@@ -413,62 +444,77 @@
     "composer": {
       "border_width": 1,
       "send": {
-        "background": "#EDF6FF",
-        "foreground": "#142D48",
-        "hover": "#FFFFFF",
-        "active": "#CADDEF"
+        "background": "#58C9F2",
+        "gradient": "#F08ACF",
+        "foreground": "#FFFFFF",
+        "hover": "#72D4F6",
+        "active": "#43B3DC",
+        "glow": "#F08ACF55"
       },
       "stop": {
-        "background": "#EDF6FF",
-        "foreground": "#142D48",
-        "hover": "#FFFFFF",
-        "active": "#CADDEF"
-      }
+        "background": "#58C9F2",
+        "gradient": "#F08ACF",
+        "foreground": "#FFFFFF",
+        "hover": "#72D4F6",
+        "active": "#43B3DC"
+      },
+      "border": "#7FE7FFA0",
+      "border_gradient": "#FF8AD0B0",
+      "glow": "#8C7BFF33",
+      "placeholder": "#A9E9FF"
     },
     "cards": {
       "explore": {
-        "background": "#123247DB",
+        "background": "#1B4560D1",
         "foreground": "#F2F7FF",
         "detail": "#D4E3F6",
         "icon": "#7FE7FF",
         "hover": "#1A4560E0",
         "active": "#22516FE6",
-        "border": "#7FE7FF40",
+        "border": "#7FE7FF80",
         "border_width": 1,
-        "radius": 14
+        "radius": 14,
+        "icon_background": "#7FE7FF2E",
+        "glow": "#7FE7FF2A"
       },
       "build": {
-        "background": "#2E1B3EDB",
+        "background": "#45244FD1",
         "foreground": "#F2F7FF",
         "detail": "#D4E3F6",
         "icon": "#FF8AD0",
         "hover": "#3D2552E0",
         "active": "#4A2E63E6",
-        "border": "#FF8AD040",
+        "border": "#FF8AD080",
         "border_width": 1,
-        "radius": 14
+        "radius": 14,
+        "icon_background": "#FF8AD02E",
+        "glow": "#FF8AD02A"
       },
       "review": {
-        "background": "#21204ADB",
+        "background": "#302C69D1",
         "foreground": "#F2F7FF",
         "detail": "#D4E3F6",
         "icon": "#B79CFF",
         "hover": "#2C2B60E0",
         "active": "#36346FE6",
-        "border": "#B79CFF40",
+        "border": "#B79CFF80",
         "border_width": 1,
-        "radius": 14
+        "radius": 14,
+        "icon_background": "#B79CFF2E",
+        "glow": "#B79CFF2A"
       },
       "plan": {
-        "background": "#123A3ADB",
+        "background": "#1A5552D1",
         "foreground": "#F2F7FF",
         "detail": "#D4E3F6",
         "icon": "#7FFFD0",
         "hover": "#1A4B4BE0",
         "active": "#225858E6",
-        "border": "#7FFFD040",
+        "border": "#7FFFD080",
         "border_width": 1,
-        "radius": 14
+        "radius": 14,
+        "icon_background": "#7FFFD02E",
+        "glow": "#7FFFD02A"
       }
     },
     "messages": {
@@ -484,8 +530,10 @@
       }
     },
     "wordmark": {
-      "foreground": "#9FEFFF",
-      "glow": "#FF8AD0"
+      "foreground": "#7FE7FF",
+      "gradient": "#FF8AD0",
+      "glow": "#FFFFFF",
+      "base": 0.92
     },
     "assets": {
       "background.window": {
@@ -502,9 +550,9 @@
         "fit": "cover",
         "alignment": [
           0.5,
-          0.5
+          0.42
         ],
-        "height": 168,
+        "height": 196,
         "opacity": 1
       },
       "composer.top_left": {
@@ -525,7 +573,7 @@
         "path": "assets/button-trace.png",
         "fit": "fill",
         "height": 32,
-        "opacity": 0.55,
+        "opacity": 0.5,
         "outset": 5
       },
       "icon.explore": {
@@ -607,8 +655,9 @@
           0.84,
           1
         ],
-        "height": 236,
-        "opacity": 1
+        "height": 264,
+        "opacity": 1,
+        "float": 5
       }
     },
     "effects": {
@@ -665,11 +714,20 @@
       ],
       "hero.new_session": [
         {
+          "kind": "petals",
+          "color": "#FFB8E6",
+          "count": 9,
+          "opacity": 0.85,
+          "size": 4.0,
+          "duration": 14,
+          "seed": 91
+        },
+        {
           "kind": "twinkle",
-          "color": "#FFE1F4",
-          "count": 10,
-          "opacity": 0.8,
-          "size": 3.0,
+          "color": "#C9F6FF",
+          "count": 12,
+          "opacity": 0.9,
+          "size": 3.4,
           "duration": 6,
           "seed": 83
         }
@@ -685,6 +743,19 @@
           "seed": 97
         }
       ]
+    },
+    "new_session": {
+      "background": "#58C9F2",
+      "gradient": "#F08ACF",
+      "foreground": "#FFFFFF",
+      "hover": "#72D4F6",
+      "active": "#43B3DC",
+      "glow": "#F08ACF55"
     }
+  },
+  "surfaces": {
+    "main": 0.7,
+    "sidebar": 0.6,
+    "blur": 0.35
   }
 }

@@ -91,11 +91,11 @@
       "id": "holographic-rhythm",
       "path": "holographic-rhythm",
       "name": "Holographic Rhythm",
-      "package_version": "0.2.0",
+      "package_version": "0.2.2",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "An original virtual idol above a holographic night city, with cyan and pink accents",
-      "digest": "sha256:255930fcff2ed20a354116b186060b93d9da4803ed6270db59bbe7319edd5260",
+      "digest": "sha256:7378df02ede028c6999897fee830bc7b11e807de0ab5c2d024d7b4afa89b8cae",
       "resources": [
         {
           "path": "assets/background-dark.png",
@@ -109,8 +109,8 @@
         },
         {
           "path": "assets/banner.png",
-          "bytes": 1454823,
-          "digest": "sha256:42893f4db724a100a5f2a97d33c2e362980eeb754d2660e16d796c9d5bc3b84e"
+          "bytes": 1985757,
+          "digest": "sha256:105e5bdfb4e9c10167cbdee5edb4c56a016bd8ec9feebe4db7f7a45c894d6095"
         },
         {
           "path": "assets/build.png",
@@ -144,8 +144,8 @@
         },
         {
           "path": "assets/figure.png",
-          "bytes": 480987,
-          "digest": "sha256:7991605ecf7f660a3ea893317b87acf65d544c8dda9afe75ceeb7018ecbc8fd6"
+          "bytes": 496613,
+          "digest": "sha256:88fa3c7256d75485172f324f58c4f2c2f08ff885883edf39b46b973ae91aba60"
         },
         {
           "path": "assets/plan.png",
@@ -159,8 +159,8 @@
         },
         {
           "path": "theme.json",
-          "bytes": 29478,
-          "digest": "sha256:4446edb5b98be21ca70d8e7bb37be1bc8a84aac4e45939461d694c51a92d3c89"
+          "bytes": 31353,
+          "digest": "sha256:7fd06d322306a3cba1b2a80f806105166ba0c273c22531ee7b3ac64924de9ec8"
         }
       ],
       "modes": [

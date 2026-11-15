@@ -10,8 +10,9 @@ The package uses Sailry's v1 theme hooks, including independent switch tracks.
 Both modes include a continuous window wallpaper, a welcome banner whose
 character rises above its top edge, four card icons (dark mode; light mode tints
 Kit's vector icons), sidebar group icons, circuit textures, composer and message
-ornaments, wordmark colors, tabs and global button colors. Send and Stop use
-solid contrasting fills with Kit vector glyphs. Standard feature-rail glyphs
+ornaments, wordmark colors, tabs and global button colors. Send, Stop and New
+Conversation use a cyan-to-pink gradient with Kit vector glyphs; the wordmark
+shares that gradient. Standard feature-rail glyphs
 retain their shapes and semantic control colors.
 
 The wallpapers use `cover`; the small circuit texture repeats on the cards.
@@ -21,7 +22,7 @@ Changing those preferences can change text contrast. The package checks cover
 the default main-panel tint, card states and modal control colors.
 
 Cyan and pink stars twinkle above the content and navigation panel tints, with
-3–5 pixel cores and brighter cross-shaped glints. The banner has pink stars, with slower holographic specks in conversations. Light mode
+3–5 pixel cores and brighter cross-shaped glints. The banner's character drifts gently and petals and stars float past its frame, with slower holographic specks in conversations. Light mode
 uses deeper colors and lower opacity for visibility. Settings → Appearance →
 Theme animation controls these layers.
 
