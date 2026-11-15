@@ -111,15 +111,16 @@ the application's configured defaults.
 Each variant may set `composer.border_width` (0–4 logical pixels). The color uses
 Kit's `input.border` token unless `composer.border` sets one; with
 `composer.border_gradient` the edge runs from that color on the left to the
-gradient color on the right. `composer.glow` adds a soft light around the
-surface and `composer.placeholder` colors the empty draft's text. The surface
+gradient color on the right. `composer.background` replaces the frosted surface's fill and `composer.glow`
+adds a soft light around the surface and `composer.placeholder` colors the empty draft's text. The surface
 and radius retain their Kit theme tokens. The default width is zero.
 
 The optional `composer.top_left` and `composer.bottom_right` assets draw fixed-size,
 transparent corner ornaments. Their `height` is the square size (16–96 pixels).
 Decorations paint behind content without taking input focus or installing actions.
 
-Any of these color objects may add `glow`, a soft light around the button, and
+Any of these color objects may add `glow`, a soft light around the button,
+`border`, a hairline edge, and
 `gradient`: the fill then runs from the
 state's color on the left to that color on the right. A variant's optional
 `new_session` object, with the same fields, colors the sidebar's New
@@ -153,7 +154,8 @@ retain Kit's normal tint. Optional `background.card.explore`,
 assets add noninteractive textures, clipped to the card radius behind its content.
 
 A card's optional `glow` adds a soft light around it, and `icon_background`
-draws a rounded tile behind its icon.
+draws a rounded tile behind its icon. `gradient` runs the card's fill from its
+state's color at the top to that color at the bottom.
 
 ## Window backgrounds and sidebar headings
 
@@ -204,7 +206,8 @@ the large theme radius, edged with `input.border`, its effects drawn over it.
 The optional `hero.new_session.figure` (16–360 pixels, requires the hero) is a
 transparent cutout standing on the banner's bottom edge, placed across it by its
 horizontal `alignment`. A figure taller than the banner rises above its top edge;
-the welcome page reserves that space, so it covers nothing above. The figure's
+the welcome page reserves that space, so it covers nothing above. A variant's
+`hero` object (`border`, `border_gradient`, `glow`) edges and lights the card. The figure's
 `float` (0–12 pixels) lets it drift up and down over six seconds while theme
 animation is on. Over a banner card, hero effects drift across the whole hero,
 past the card's frame.
