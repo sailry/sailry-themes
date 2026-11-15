@@ -21,6 +21,10 @@ unthemed layout, with no character or pose reference. Prompt:
 
 From the attached mockup, paint ONLY the Monkey King together with the golden somersault cloud (筋斗云) he leaps from, as one standalone cutout for compositing: the same character, costume, painting style, airborne pose with the golden staff swung overhead in both hands, his flowing red ink-wash cape, and the swirling gold-outlined auspicious cloud below and behind his feet. Seen from behind at an angle. He has NO tail. Everything fully inside the frame with margin. No UI, no text, no mountains, no palace, no other scenery. Background: a perfectly flat, uniform chroma-key green #00FF00 everywhere around him, with no shadows, glow or gradients on it, and no green anywhere on the character or cloud.
 
+After keying, its saturation was lowered to 82% and its contrast to 78% around a
+dark mid-tone, and the cloud darkened a further 22%, so the figure sits in the
+wallpaper's dim light.
+
 The green ground was keyed to alpha with spill removed, then the figure was
 trimmed, scaled to 720 pixels high and indexed.
 
@@ -84,10 +88,11 @@ Stop use separate high-contrast solid fills with Kit vector glyphs.
 
 ### sheen.png
 
-The mask of the hero's sheen: the gold of the staff, the cape's cloud patterns,
-the armor and the somersault cloud, taken from `hero.png` by color (warm,
-saturated and bright pixels), softened by a 1.2-pixel blur and indexed. It is
-not generated artwork.
+The mask of the hero's sheen: the gold of the staff and of the cape's cloud
+patterns, taken from the keyed hero by color (warm, saturated and bright pixels)
+within the staff's and the cape's regions, so the armor and the somersault cloud
+stay unlit. Softened by a 1.4-pixel blur, strengthened and indexed. It is not
+generated artwork.
 
 ### Send glyph refinement
 
