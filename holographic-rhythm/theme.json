@@ -2,8 +2,8 @@
   "version": 1,
   "id": "holographic-rhythm",
   "name": "Holographic Rhythm",
-  "description": "A blue-to-pink virtual singer above a luminous holographic sky city, with pink technology accents",
-  "package_version": "0.1.2",
+  "description": "An original virtual idol above a holographic night city, with cyan and pink accents",
+  "package_version": "0.2.0",
   "license": {
     "author": "Sailry",
     "name": "Apache-2.0",
@@ -109,7 +109,7 @@
         "background": "#F0F7FFDB",
         "foreground": "#142D48",
         "detail": "#344B68",
-        "icon": "#8E2B65",
+        "icon": "#0E7FA3",
         "hover": "#E6EFFBD9",
         "active": "#DAE7F7E6",
         "border": "#B66DAB38",
@@ -120,7 +120,7 @@
         "background": "#F0F7FFDB",
         "foreground": "#142D48",
         "detail": "#344B68",
-        "icon": "#8E2B65",
+        "icon": "#C2347F",
         "hover": "#E6EFFBD9",
         "active": "#DAE7F7E6",
         "border": "#B66DAB38",
@@ -131,7 +131,7 @@
         "background": "#F0F7FFDB",
         "foreground": "#142D48",
         "detail": "#344B68",
-        "icon": "#8E2B65",
+        "icon": "#6E52D1",
         "hover": "#E6EFFBD9",
         "active": "#DAE7F7E6",
         "border": "#B66DAB38",
@@ -142,7 +142,7 @@
         "background": "#F0F7FFDB",
         "foreground": "#142D48",
         "detail": "#344B68",
-        "icon": "#8E2B65",
+        "icon": "#16896A",
         "hover": "#E6EFFBD9",
         "active": "#DAE7F7E6",
         "border": "#B66DAB38",
@@ -177,32 +177,35 @@
         "opacity": 1
       },
       "hero.new_session": {
-        "path": "assets/hero.png",
-        "fit": "contain",
-        "height": 220,
+        "path": "assets/banner.png",
+        "fit": "cover",
+        "alignment": [
+          0.5,
+          0.5
+        ],
+        "height": 168,
         "opacity": 1
       },
       "composer.top_left": {
         "path": "assets/corner-top-left.png",
         "fit": "contain",
         "height": 40,
-        "opacity": 0.45
+        "opacity": 0.45,
+        "outset": 10
       },
       "composer.bottom_right": {
         "path": "assets/corner-bottom-right.png",
         "fit": "contain",
         "height": 40,
-        "opacity": 0.45
+        "opacity": 0.45,
+        "outset": 10
       },
       "button.new_session": {
         "path": "assets/button-trace.png",
         "fit": "fill",
         "height": 32,
-        "opacity": 0.65
-      },
-      "icon.explore": {
-        "path": "assets/explore.png",
-        "fit": "contain"
+        "opacity": 0.65,
+        "outset": 5
       },
       "background.card.explore": {
         "path": "assets/circuit.png",
@@ -210,19 +213,11 @@
         "tile_size": 160,
         "opacity": 0.07
       },
-      "icon.build": {
-        "path": "assets/build.png",
-        "fit": "contain"
-      },
       "background.card.build": {
         "path": "assets/circuit.png",
         "fit": "tile",
         "tile_size": 160,
         "opacity": 0.07
-      },
-      "icon.review": {
-        "path": "assets/review.png",
-        "fit": "contain"
       },
       "background.card.review": {
         "path": "assets/circuit.png",
@@ -230,35 +225,11 @@
         "tile_size": 160,
         "opacity": 0.07
       },
-      "icon.plan": {
-        "path": "assets/plan.png",
-        "fit": "contain"
-      },
       "background.card.plan": {
         "path": "assets/circuit.png",
         "fit": "tile",
         "tile_size": 160,
         "opacity": 0.07
-      },
-      "icon.group.hosts": {
-        "path": "assets/plan.png",
-        "fit": "contain"
-      },
-      "icon.group.activity": {
-        "path": "assets/review.png",
-        "fit": "contain"
-      },
-      "icon.group.unassigned": {
-        "path": "assets/explore.png",
-        "fit": "contain"
-      },
-      "icon.group.projects": {
-        "path": "assets/build.png",
-        "fit": "contain"
-      },
-      "icon.group.recent": {
-        "path": "assets/plan.png",
-        "fit": "contain"
       },
       "message.user.top_left": {
         "path": "assets/corner-top-left.png",
@@ -271,6 +242,16 @@
         "fit": "contain",
         "height": 24,
         "opacity": 0.18
+      },
+      "hero.new_session.figure": {
+        "path": "assets/figure.png",
+        "fit": "contain",
+        "alignment": [
+          0.84,
+          1
+        ],
+        "height": 236,
+        "opacity": 1
       }
     },
     "effects": {
@@ -327,20 +308,11 @@
       ],
       "hero.new_session": [
         {
-          "kind": "pulse",
-          "color": "#1384B2",
-          "count": 1,
-          "opacity": 0.3,
-          "size": 6,
-          "duration": 7,
-          "seed": 0
-        },
-        {
           "kind": "twinkle",
-          "color": "#A43F86",
-          "count": 12,
-          "opacity": 0.64,
-          "size": 3.4,
+          "color": "#FFE1F4",
+          "count": 10,
+          "opacity": 0.8,
+          "size": 3.0,
           "duration": 6,
           "seed": 83
         }
@@ -455,46 +427,46 @@
     },
     "cards": {
       "explore": {
-        "background": "#162A46DB",
+        "background": "#123247DB",
         "foreground": "#F2F7FF",
         "detail": "#D4E3F6",
-        "icon": "#FFB2DD",
-        "hover": "#243B5BD9",
-        "active": "#304967E6",
-        "border": "#EAA6D53B",
+        "icon": "#7FE7FF",
+        "hover": "#1A4560E0",
+        "active": "#22516FE6",
+        "border": "#7FE7FF40",
         "border_width": 1,
         "radius": 14
       },
       "build": {
-        "background": "#162A46DB",
+        "background": "#2E1B3EDB",
         "foreground": "#F2F7FF",
         "detail": "#D4E3F6",
-        "icon": "#FFB2DD",
-        "hover": "#243B5BD9",
-        "active": "#304967E6",
-        "border": "#EAA6D53B",
+        "icon": "#FF8AD0",
+        "hover": "#3D2552E0",
+        "active": "#4A2E63E6",
+        "border": "#FF8AD040",
         "border_width": 1,
         "radius": 14
       },
       "review": {
-        "background": "#162A46DB",
+        "background": "#21204ADB",
         "foreground": "#F2F7FF",
         "detail": "#D4E3F6",
-        "icon": "#FFB2DD",
-        "hover": "#243B5BD9",
-        "active": "#304967E6",
-        "border": "#EAA6D53B",
+        "icon": "#B79CFF",
+        "hover": "#2C2B60E0",
+        "active": "#36346FE6",
+        "border": "#B79CFF40",
         "border_width": 1,
         "radius": 14
       },
       "plan": {
-        "background": "#162A46DB",
+        "background": "#123A3ADB",
         "foreground": "#F2F7FF",
         "detail": "#D4E3F6",
-        "icon": "#FFB2DD",
-        "hover": "#243B5BD9",
-        "active": "#304967E6",
-        "border": "#EAA6D53B",
+        "icon": "#7FFFD0",
+        "hover": "#1A4B4BE0",
+        "active": "#225858E6",
+        "border": "#7FFFD040",
         "border_width": 1,
         "radius": 14
       }
@@ -512,8 +484,8 @@
       }
     },
     "wordmark": {
-      "foreground": "#B5E8FF",
-      "glow": "#F297D5"
+      "foreground": "#9FEFFF",
+      "glow": "#FF8AD0"
     },
     "assets": {
       "background.window": {
@@ -526,28 +498,35 @@
         "opacity": 1
       },
       "hero.new_session": {
-        "path": "assets/hero.png",
-        "fit": "contain",
-        "height": 220,
+        "path": "assets/banner.png",
+        "fit": "cover",
+        "alignment": [
+          0.5,
+          0.5
+        ],
+        "height": 168,
         "opacity": 1
       },
       "composer.top_left": {
         "path": "assets/corner-top-left.png",
         "fit": "contain",
         "height": 40,
-        "opacity": 0.55
+        "opacity": 0.55,
+        "outset": 10
       },
       "composer.bottom_right": {
         "path": "assets/corner-bottom-right.png",
         "fit": "contain",
         "height": 40,
-        "opacity": 0.55
+        "opacity": 0.55,
+        "outset": 10
       },
       "button.new_session": {
         "path": "assets/button-trace.png",
         "fit": "fill",
         "height": 32,
-        "opacity": 0.55
+        "opacity": 0.55,
+        "outset": 5
       },
       "icon.explore": {
         "path": "assets/explore.png",
@@ -620,6 +599,16 @@
         "fit": "contain",
         "height": 24,
         "opacity": 0.18
+      },
+      "hero.new_session.figure": {
+        "path": "assets/figure.png",
+        "fit": "contain",
+        "alignment": [
+          0.84,
+          1
+        ],
+        "height": 236,
+        "opacity": 1
       }
     },
     "effects": {
@@ -676,20 +665,11 @@
       ],
       "hero.new_session": [
         {
-          "kind": "pulse",
-          "color": "#84E7FF",
-          "count": 1,
-          "opacity": 0.5,
-          "size": 6,
-          "duration": 7,
-          "seed": 0
-        },
-        {
           "kind": "twinkle",
-          "color": "#FFC0EB",
-          "count": 12,
-          "opacity": 0.9,
-          "size": 3.4,
+          "color": "#FFE1F4",
+          "count": 10,
+          "opacity": 0.8,
+          "size": 3.0,
           "duration": 6,
           "seed": 83
         }

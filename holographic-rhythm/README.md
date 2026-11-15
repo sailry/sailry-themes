@@ -1,14 +1,15 @@
 # Holographic Rhythm
 
-A portable Sailry v1 theme with a blue-to-pink virtual singer, a holographic sky
-city, pink technology icons and translucent cool-blue surfaces.
+A portable Sailry v1 theme with an original virtual idol on a holographic
+night-city banner, neon line icons and translucent indigo surfaces.
 
 Import this directory through Settings → Appearance → Import. Choose either
 light or dark mode. Repository theme directories are not installed automatically.
 The package uses Sailry's v1 theme hooks, including independent switch tracks.
 
-Both modes include a continuous window wallpaper, a transparent welcome hero,
-four card icons, sidebar group icons, circuit textures, composer and message
+Both modes include a continuous window wallpaper, a welcome banner whose
+character rises above its top edge, four card icons (dark mode; light mode tints
+Kit's vector icons), sidebar group icons, circuit textures, composer and message
 ornaments, wordmark colors, tabs and global button colors. Send and Stop use
 solid contrasting fills with Kit vector glyphs. Standard feature-rail glyphs
 retain their shapes and semantic control colors.
@@ -20,8 +21,7 @@ Changing those preferences can change text contrast. The package checks cover
 the default main-panel tint, card states and modal control colors.
 
 Cyan and pink stars twinkle above the content and navigation panel tints, with
-3–5 pixel cores and brighter cross-shaped glints. The portrait has a cyan halo
-and pink stars, with slower holographic specks in conversations. Light mode
+3–5 pixel cores and brighter cross-shaped glints. The banner has pink stars, with slower holographic specks in conversations. Light mode
 uses deeper colors and lower opacity for visibility. Settings → Appearance →
 Theme animation controls these layers.
 

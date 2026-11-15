@@ -91,16 +91,16 @@
       "id": "holographic-rhythm",
       "path": "holographic-rhythm",
       "name": "Holographic Rhythm",
-      "package_version": "0.1.2",
+      "package_version": "0.2.0",
       "author": "Sailry",
       "license": "Apache-2.0",
-      "description": "A blue-to-pink virtual singer above a luminous holographic sky city, with pink technology accents",
-      "digest": "sha256:c018cc4d37bb01df9df12ba02ae9c8e1629d4478537ef6d74410548d9a719e24",
+      "description": "An original virtual idol above a holographic night city, with cyan and pink accents",
+      "digest": "sha256:255930fcff2ed20a354116b186060b93d9da4803ed6270db59bbe7319edd5260",
       "resources": [
         {
           "path": "assets/background-dark.png",
-          "bytes": 2422751,
-          "digest": "sha256:7b950bc4838a5e1832ff8df7ff3ead200d4149f5797526addeedcc2557165c90"
+          "bytes": 2309645,
+          "digest": "sha256:0aeaefb27199667ba139354aac671df7905a68cfe111cd385e4d264f58781715"
         },
         {
           "path": "assets/background.png",
@@ -108,14 +108,19 @@
           "digest": "sha256:6f3c2dcb6ad4c4db9cd3303394c98b7d658b57dd8a82bc39b0cf1fc4044c103c"
         },
         {
+          "path": "assets/banner.png",
+          "bytes": 1454823,
+          "digest": "sha256:42893f4db724a100a5f2a97d33c2e362980eeb754d2660e16d796c9d5bc3b84e"
+        },
+        {
           "path": "assets/build.png",
-          "bytes": 3242,
-          "digest": "sha256:55bd86e85215fc8d3a3c6667bee392d672844a307205f77729d787571abae6da"
+          "bytes": 18782,
+          "digest": "sha256:501aee8670110de6ef8c068292b9a869b83d7fae07ddaa001c11ff6401d13a17"
         },
         {
           "path": "assets/button-trace.png",
-          "bytes": 15885,
-          "digest": "sha256:fbb54aac07d7484e2cf144159f4584400416a5cefc794cdfe6c7d5eb1f90d70b"
+          "bytes": 25676,
+          "digest": "sha256:4517f35c793c1acc915c4323e1d9cffec03086f1bd7c5aeded7d9950ea2d3f4c"
         },
         {
           "path": "assets/circuit.png",
@@ -124,38 +129,38 @@
         },
         {
           "path": "assets/corner-bottom-right.png",
-          "bytes": 2197,
-          "digest": "sha256:2939a7e8c1a6d860eadc0b2009738e712ca9b24dbe3f31a821657f6bf5df82f9"
+          "bytes": 6470,
+          "digest": "sha256:52c54000f744b4501c4a2c93e188e31175cd3a3e90c19520d5a22ef0aff2f8d4"
         },
         {
           "path": "assets/corner-top-left.png",
-          "bytes": 2176,
-          "digest": "sha256:0875d371fe0e0976c80cfb4f9fddd13d4b502ebb0be2dd95244b803b892d16fb"
+          "bytes": 6843,
+          "digest": "sha256:c087cb9d721a9a234ac98c4e138ecc4c5ea24830362286f3bdb540233ce45814"
         },
         {
           "path": "assets/explore.png",
-          "bytes": 5987,
-          "digest": "sha256:eff10a57e83bf94c4af21dad144f1c71a7ba51cbeb29012eba6090ab6cd6c748"
+          "bytes": 21663,
+          "digest": "sha256:0c2c42ee1145d499ab7d17b1cb33716b308c990f5ba52afe2f3bfbe7c54cb6a7"
         },
         {
-          "path": "assets/hero.png",
-          "bytes": 969182,
-          "digest": "sha256:781392df7c0bb0f21089bad22225f07b9d58e5d5bd27b6e3675112349f38ee7d"
+          "path": "assets/figure.png",
+          "bytes": 480987,
+          "digest": "sha256:7991605ecf7f660a3ea893317b87acf65d544c8dda9afe75ceeb7018ecbc8fd6"
         },
         {
           "path": "assets/plan.png",
-          "bytes": 3463,
-          "digest": "sha256:1737ec79ba856d3f93faaf83ef73741bf75361bd734d543af905781b3ecd52a0"
+          "bytes": 20361,
+          "digest": "sha256:40b11f699cc1c3f14d3d7fd83662b95faddd947b9d017e3c847b897c9f537643"
         },
         {
           "path": "assets/review.png",
-          "bytes": 4152,
-          "digest": "sha256:122fc55da98b6435e7aa5a543c5c0f449c1fd3d704011440f9731bf93d2bbabb"
+          "bytes": 18473,
+          "digest": "sha256:29d866e67c578cd83793428f4a71051266a2b44c751b653defb86d2cd58ebbfa"
         },
         {
           "path": "theme.json",
-          "bytes": 30070,
-          "digest": "sha256:ff20294be5a1115ccbc2a4da1d6ab97862c26d5da04db602e7787cbc7778a225"
+          "bytes": 29478,
+          "digest": "sha256:4446edb5b98be21ca70d8e7bb37be1bc8a84aac4e45939461d694c51a92d3c89"
         }
       ],
       "modes": [

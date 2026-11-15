@@ -174,6 +174,17 @@ Its translucent cards share a small repeating grain texture and themed icons.
 Compress production PNGs and size small ornaments/icons for their displayed size;
 large wallpapers should retain enough detail for the window.
 
+## Welcome hero
+
+`hero.new_session` sits above the welcome wordmark at its `height` (16–240
+pixels). With `contain` it is a cutout drawn unclipped over its effects, so a
+halo fades out past it. With `cover` or `fill` it is a banner card: clipped to
+the large theme radius, edged with `input.border`, its effects drawn over it.
+The optional `hero.new_session.figure` (16–360 pixels, requires the hero) is a
+transparent cutout standing on the banner's bottom edge, placed across it by its
+horizontal `alignment`. A figure taller than the banner rises above its top edge;
+the welcome page reserves that space, so it covers nothing above.
+
 ## Message surfaces and wordmark
 
 `messages.user` and `messages.assistant` accept optional solid `background`,
@@ -195,7 +206,8 @@ square particles and their illumination. Defaults follow Kit's foreground.
 `button.new_session` overlays an eventless, full-width top-edge ornament on the
 sidebar's existing New Conversation button. Its `height` is 4–96 pixels; a thin
 transparent PNG preserves the label and Kit's fill and interaction states.
-New-session artwork is clipped to the Kit button's outer rounded bounds. Its
+New-session artwork is clipped to the Kit button's outer rounded bounds unless
+it sets an `outset`. Its
 configured height is capped at the button height; shorter strips leave the rest
 of the overlay transparent. Decoration never creates an inset border or changes
 button hit testing.
@@ -224,7 +236,7 @@ Targets are `background.window`, `background.content`, `background.sidebar`,
 `conversation`, `hero.new_session` and the existing `banner.*` slots. Background
 and conversation effects also work without an image; hero/banner targets require
 their corresponding artwork to establish the region's height. Hero effects paint
-behind the illustration. Window effects paint above the wallpaper and beneath
+behind a cutout and over a banner card. Window effects paint above the wallpaper and beneath
 the Shell's translucent surfaces. Conversation effects paint beneath content
 and remain clipped to their container. These inert layers do not capture clicks,
 focus, scrolling or text selection.
