@@ -3,7 +3,7 @@
   "id": "great-sage",
   "name": "Great Sage",
   "description": "A theme inspired by the Great Sage, with golden accents and ink landscapes",
-  "package_version": "0.1.4",
+  "package_version": "0.1.5",
   "license": {
     "author": "Sailry",
     "name": "Apache-2.0",
@@ -84,43 +84,43 @@
     },
     "cards": {
       "explore": {
-        "background": "#F0E4CBCC",
+        "background": "#F3E9D6CC",
         "foreground": "#32281E",
         "detail": "#594835",
         "icon": "#805914",
-        "hover": "#E9D8B5D9",
-        "active": "#E1CEA2E6",
+        "hover": "#EADBBFD9",
+        "active": "#E0CDA8E6",
         "border": "#80591438",
         "border_width": 1
       },
       "build": {
-        "background": "#F4DFD6CC",
+        "background": "#F3E9D6CC",
         "foreground": "#32281E",
         "detail": "#594835",
-        "icon": "#9C4330",
-        "hover": "#EDD0C4D9",
-        "active": "#E3BFB2E6",
-        "border": "#9C433038",
+        "icon": "#805914",
+        "hover": "#EADBBFD9",
+        "active": "#E0CDA8E6",
+        "border": "#80591438",
         "border_width": 1
       },
       "review": {
-        "background": "#EDE9CFCC",
+        "background": "#F3E9D6CC",
         "foreground": "#32281E",
         "detail": "#594835",
-        "icon": "#73651D",
-        "hover": "#E3DDB8D9",
-        "active": "#D9D0A3E6",
-        "border": "#73651D38",
+        "icon": "#805914",
+        "hover": "#EADBBFD9",
+        "active": "#E0CDA8E6",
+        "border": "#80591438",
         "border_width": 1
       },
       "plan": {
-        "background": "#E8E0D5CC",
+        "background": "#F3E9D6CC",
         "foreground": "#32281E",
         "detail": "#594835",
-        "icon": "#74604B",
-        "hover": "#DED3C3D9",
-        "active": "#D2C4AFE6",
-        "border": "#74604B38",
+        "icon": "#805914",
+        "hover": "#EADBBFD9",
+        "active": "#E0CDA8E6",
+        "border": "#80591438",
         "border_width": 1
       }
     },
@@ -128,7 +128,7 @@
       "hero.new_session": {
         "path": "assets/hero.png",
         "fit": "contain",
-        "height": 200,
+        "height": 240,
         "opacity": 1
       },
       "composer.top_left": {
@@ -152,7 +152,7 @@
           0.5,
           0.5
         ],
-        "opacity": 0.3
+        "opacity": 0.18
       },
       "icon.explore": {
         "path": "assets/explore.png",
@@ -407,43 +407,43 @@
     },
     "cards": {
       "explore": {
-        "background": "#49351FB3",
+        "background": "#1A1410B3",
         "foreground": "#F2E6CF",
-        "detail": "#E0D1B9",
+        "detail": "#D9C8AA",
         "icon": "#DEB66B",
-        "hover": "#594126CC",
-        "active": "#654A2DD9",
-        "border": "#DEB66B38",
+        "hover": "#2A2018CC",
+        "active": "#36291ED9",
+        "border": "#D8AE5640",
         "border_width": 1
       },
       "build": {
-        "background": "#502720B3",
+        "background": "#1A1410B3",
         "foreground": "#F2E6CF",
-        "detail": "#E0D1B9",
-        "icon": "#EF8D74",
-        "hover": "#623028CC",
-        "active": "#703B30D9",
-        "border": "#EF8D7438",
+        "detail": "#D9C8AA",
+        "icon": "#DEB66B",
+        "hover": "#2A2018CC",
+        "active": "#36291ED9",
+        "border": "#D8AE5640",
         "border_width": 1
       },
       "review": {
-        "background": "#49411EB3",
+        "background": "#1A1410B3",
         "foreground": "#F2E6CF",
-        "detail": "#E0D1B9",
-        "icon": "#DECA71",
-        "hover": "#575025CC",
-        "active": "#655B2CD9",
-        "border": "#DECA7138",
+        "detail": "#D9C8AA",
+        "icon": "#DEB66B",
+        "hover": "#2A2018CC",
+        "active": "#36291ED9",
+        "border": "#D8AE5640",
         "border_width": 1
       },
       "plan": {
-        "background": "#38312AB3",
+        "background": "#1A1410B3",
         "foreground": "#F2E6CF",
-        "detail": "#E0D1B9",
-        "icon": "#D1B994",
-        "hover": "#463B32CC",
-        "active": "#514439D9",
-        "border": "#D1B99438",
+        "detail": "#D9C8AA",
+        "icon": "#DEB66B",
+        "hover": "#2A2018CC",
+        "active": "#36291ED9",
+        "border": "#D8AE5640",
         "border_width": 1
       }
     },
@@ -451,7 +451,7 @@
       "hero.new_session": {
         "path": "assets/hero.png",
         "fit": "contain",
-        "height": 200,
+        "height": 240,
         "opacity": 1
       },
       "composer.top_left": {

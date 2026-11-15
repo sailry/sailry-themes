@@ -5,16 +5,16 @@
       "id": "great-sage",
       "path": "great-sage",
       "name": "Great Sage",
-      "package_version": "0.1.4",
+      "package_version": "0.1.5",
       "author": "Sailry",
       "license": "Apache-2.0",
       "description": "A theme inspired by the Great Sage, with golden accents and ink landscapes",
-      "digest": "sha256:ff6de47f3b57d30a9d447d97d1d47d6b9a6eb13e306d01b80530bd2dea43f03a",
+      "digest": "sha256:7d96615b17fce57c23c1bcc85b5e955f5e6153cb33a26e83e6403d719bdff860",
       "resources": [
         {
           "path": "assets/background.png",
-          "bytes": 470967,
-          "digest": "sha256:21ab20b9750ea42ecf2b0b7afd505caf04efbdcd2c5e86555757f20066a3f410"
+          "bytes": 313218,
+          "digest": "sha256:c3827e604602c90b71b575765d0ab7f8054cd4fb1b8626d8b969f27174fe5058"
         },
         {
           "path": "assets/build.png",
@@ -48,8 +48,8 @@
         },
         {
           "path": "assets/hero.png",
-          "bytes": 211741,
-          "digest": "sha256:98172ab658582dca0aa4c5f007d4a4062d7445ba947b0002fce6ec6b9ec61004"
+          "bytes": 186386,
+          "digest": "sha256:d24dcdd4f3f4da60c499d6a5e75171739c6a6129288187d814478710de0697dd"
         },
         {
           "path": "assets/plan.png",
@@ -63,8 +63,8 @@
         },
         {
           "path": "theme.json",
-          "bytes": 27858,
-          "digest": "sha256:456ecbdc1ab7ddbd050b1c362f470714681f74224784668d7e5b9f5be9eff0be"
+          "bytes": 27859,
+          "digest": "sha256:5140af40a6bafdf6491b31ed544ea878aefee16960067e0e44df804a007f5e6d"
         }
       ],
       "modes": [

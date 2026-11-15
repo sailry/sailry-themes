@@ -1,9 +1,9 @@
 # Great Sage artwork
 
 Original Sun Wukong / Great Sage theme artwork generated with the built-in OpenAI
-imagegen tool. The approved AI-generated Sailry theme concept was the hero's style
-reference; the lower-right corner used the generated upper-left ornament as its
-edit target. No external game artwork was imported. Package and artwork are
+imagegen tool. The hero and landscape come from an approved AI-generated
+full-window concept; the lower-right corner used the generated upper-left
+ornament as its edit target. No external game artwork was imported. Package and artwork are
 licensed under Apache-2.0, as specified in `theme.json`.
 
 Production assets are compressed indexed PNGs with transparency. The landscape
@@ -15,11 +15,23 @@ sets background opacity separately for light and dark modes.
 
 ### hero.png
 
-Use case: illustration-story. Project asset: transparent welcome hero for the Great Sage desktop theme. The reference image is ONLY the approved visual style reference, not an edit target. Generate ONLY the ORIGINAL Sun Wukong bust illustration from the reference, no interface, no text, no Sailry wordmark. Wide landscape canvas about 3:2, bust centered with all crown and swept red phoenix plumes contained in canvas, black and antique gold engraved armor, monkey face, small crimson scarf, gold filigree crown. Painterly mythological Chinese illustration, poised fierce expression, restrained ink and gold look. Bust should fade naturally at lower edge with subtle scattered gold ink, genuine transparent alpha around the figure, no black rectangle, no checkerboard drawn in image. It must remain legible at 220px display height against black or ivory. Original character design, not a game character.
+Generated with gpt-6.1-sol from the approved full-window concept, which was
+itself generated from a text description over a screenshot of Sailry's
+unthemed layout, with no character or pose reference. Prompt:
+
+From the attached mockup, paint ONLY the Monkey King as a standalone cutout for compositing: the same character, costume, painting style, airborne pose with the golden staff swung overhead in both hands, and his flowing red ink-wash cape, seen from behind at an angle. He has NO tail. Full body including the whole staff and cape, fully inside the frame with margin. No UI, no text, no clouds, no mountains, no palace, no background scenery. Background: a perfectly flat, uniform chroma-key green #00FF00 everywhere around him, with no shadows, glow or gradients on it, and no green anywhere on the character.
+
+The green ground was keyed to alpha with spill removed, then the figure was
+trimmed, scaled to 720 pixels high and indexed.
 
 ### background.png
 
-Use case: style-transfer. Project asset: replacement background decoration PNG for Sailry's Great Sage theme. The existing landscape is the edit target; the approved UI concept is the style reference only. Output only background artwork, never interface, lettering, portrait or controls. High-resolution 4:3 landscape, genuine transparent alpha with no paper or black rectangle. Match the reference's antique gold and vermilion ink atmosphere: hollow gold-outline auspicious clouds at the top-right and lower corners, flowing gold ribbons and sparse dry-brush dust, low charcoal mountains with gold edges along the bottom. No massive right-hand mountain or cream-filled cloud masses. Broad muted vermilion and burgundy ink washes across the upper third, tapering toward the sides. Keep the central lower content area calm and mostly transparent without leaving most of the canvas empty. Insets should survive a centered cover crop. No text, logo, portrait, GUI, watermark or painted checkerboard. Shared transparent art works at lower opacity over ivory.
+Generated with gpt-6.1-sol from the same approved concept. Prompt:
+
+From the attached mockup, paint ONLY its background scenery as a window wallpaper: the same painting style, black/gold/red palette, golden Heavenly Palace on the sea of clouds, waterfalls, layered ink mountains, golden river, gold-outlined auspicious clouds, gold dust and red silk ribbons and crimson ink smoke. NO UI, NO text, NO wordmark, NO people or characters, NO Monkey King and no staff. Keep the centre (where the wordmark, composer and cards sit) darker and calmer; the detail lives at the edges and the top. The left quarter (behind the sidebar) stays dim and quiet.
+
+The painting was scaled to 1600 by 1000 and indexed; its near-black ink is
+fully transparent, so the theme background shows there unchanged.
 
 ### cloud-top-left.png
 
